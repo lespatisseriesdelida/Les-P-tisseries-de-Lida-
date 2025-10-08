@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Les Pâtisseries de Lida — Cake Design & Pâtisserie fine</title>
+  <meta name="description" content="Gâteaux sur mesure, pièces montées élégantes, desserts raffinés, petits fours salés et verrines. Créations artisanales par Les Pâtisseries de Lida.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <img class="logo" src="assets/logo.svg" alt="Logo Les Pâtisseries de Lida">
+      <h1 class="display">Les Pâtisseries de Lida</h1>
+      <p class="subtitle">Créations sur mesure en Cake Design & Pâtisserie fine</p>
+      <nav class="nav">
+        <a href="#creations">Créations</a>
+        <a href="#sale">Salé & verrines</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="creations" class="section">
+      <div class="wrap">
+        <h2 class="display">Nos créations sucrées</h2>
+        <p>
+          Gâteaux d’exception, pièces montées élégantes et desserts raffinés —
+          entièrement personnalisés selon vos envies, vos thèmes et le nombre de parts souhaité.
+        </p>
+        <ul class="cards">
+          <li><h3>Gâteaux sur mesure</h3><p>Anniversaires, baby shower, corporate… thèmes, formes et textures modernes.</p></li>
+          <li><h3>Pièces montées</h3><p>Architecture élégante pour mariages et grandes réceptions.</p></li>
+          <li><h3>Desserts raffinés</h3><p>Entremets, cupcakes, biscuits décorés et autres douceurs.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="sale" class="section alt">
+      <div class="wrap">
+        <h2 class="display">L’art du salé</h2>
+        <p>Pour compléter l’univers sucré, nous proposons aussi des <strong>petits fours salés</strong> et des <strong>verrines gourmandes</strong> — parfaits pour vos cocktails et réceptions.</p>
+        <ul class="cards">
+          <li><h3>Petits fours salés</h3><p>Feuilletés, mini-tartelettes et bouchées selon la saison.</p></li>
+          <li><h3>Verrines</h3><p>Compositions fraîches, équilibrées et élégantes.</p></li>
+          <li><h3>Formules réception</h3><p>Assortiments sucré/salé coordonnés pour vos événements.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="galerie" class="section">
+      <div class="wrap">
+        <h2 class="display">Galerie</h2>
+        <div class="gallery">
+          <img src="assets/photos/1.jpg" alt="Exemple de gâteau 1">
+          <img src="assets/photos/2.jpg" alt="Exemple de gâteau 2">
+          <img src="assets/photos/3.jpg" alt="Exemple de gâteau 3">
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="wrap contact">
+        <h2 class="display">Contact</h2>
+        <p>📍 Annœullin, France</p>
+        <p>📧 <a href="mailto:contact@lespatisseriesdelida.fr">contact@lespatisseriesdelida.fr</a></p>
+        <p>Pour une commande sur mesure : thème, date & nombre de parts.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© <span id="year"></span> Les Pâtisseries de Lida — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

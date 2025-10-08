@@ -1,0 +1,44 @@
+/* Styles simples et élégants pour Les Pâtisseries de Lida */
+:root{
+  --bg:#fffaf6;
+  --ink:#1f2937;
+  --muted:#6b7280;
+  --accent:#cda47a;
+  --accent-2:#f5e6d4;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.6;
+}
+.display{font-family:'Playfair Display', serif}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+.hero{
+  background: radial-gradient(1200px 300px at 50% -10%, var(--accent-2), transparent), #fff;
+  border-bottom:1px solid rgba(0,0,0,.06);
+  text-align:center;
+  padding:40px 0 24px;
+}
+.logo{width:90px;height:auto;display:block;margin:0 auto 10px}
+h1{margin:0;font-size:40px}
+.subtitle{margin:6px 0 14px;color:var(--muted)}
+.nav{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+.nav a{color:#111;text-decoration:none;border:1px solid rgba(0,0,0,.08);padding:8px 12px;border-radius:999px}
+.nav a:hover{background:#111;color:#fff}
+
+.section{padding:42px 0}
+.section.alt{background:#fffefb;border-top:1px solid rgba(0,0,0,.05);border-bottom:1px solid rgba(0,0,0,.05)}
+h2{margin:0 0 10px;font-size:28px}
+p{color:#374151;margin:8px 0}
+.cards{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;padding:0;margin:18px 0 0}
+.cards li{border:1px solid rgba(0,0,0,.08);border-radius:16px;padding:14px;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.cards h3{margin:0 0 6px;font-size:18px}
+
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:12px}
+.gallery img{width:100%;height:220px;object-fit:cover;border-radius:14px;border:1px solid rgba(0,0,0,.08);box-shadow:0 1px 2px rgba(0,0,0,.03)}
+
+.contact a{color:#111}
+.footer{border-top:1px solid rgba(0,0,0,.06);padding:20px 0;text-align:center;color:#6b7280;font-size:14px;background:#fff}
