@@ -1,10 +1,32 @@
-/* Styles simples et élégants pour Les Pâtisseries de Lida */
+/* Styles simples et élégants pour Les Pâtisseries de Lida 
 :root{
-  --bg:#fffaf6;
-  --ink:#1f2937;
+  --bg: var(--cream);
+  --ink: var(--black);
+  --accent: var(--coffee);
+  --accent-2: var(--pink);
   --muted:#6b7280;
   --accent:#cda47a;
   --accent-2:#f5e6d4;
+  --navy: #1a2238;
+  --pink: #f8e9ec;
+  --coffee: #d2bba0;
+  --cream: #fdf6ed;
+  --black: #0e0e0e;
+}*/
+  :root {
+  --navy: #1a2238;
+  --pink: #f8e9ec;
+  --coffee: #d2bba0;
+  --cream: #fdf6ed;
+  --black: #0e0e0e;
+
+  /* تنظیم رنگ‌های کلی سایت */
+  --bg: var(--cream);
+  --ink: var(--black);
+  --accent: var(--coffee);
+  --accent-2: var(--pink);
+  --muted:#6b7280
+  }
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
