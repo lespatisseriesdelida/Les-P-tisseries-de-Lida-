@@ -11,3 +11,10 @@ Site statique simple (HTML + CSS) pour GitHub Pages.
 - Remplacez `assets/logo.svg` par votre vrai logo (même nom de fichier).
 - Remplacez les images `assets/photos/*.jpg` par vos photos réelles.
 - Modifiez les textes dans `index.html`.
+
+## palet
+- Navy Blue	#1a2238	رنگ اصلی پس‌زمینه یا هدر (سنگین و باکلاس)
+- Pale Pink	#f8e9ec	رنگ پس‌زمینه‌ی نرم برای بخش‌ها یا دکمه‌های ظریف
+- Light Coffee	#d2bba0	رنگ مکمل برای فریم‌ها، خطوط یا دکمه‌های طلایی-قهوه‌ای
+- Cream	#fdf6ed	رنگ پس‌زمینه‌ی اصلی صفحه (روشن و تمیز)
+- Rich Black	#0e0e0e	برای متن‌ها، لوگو یا جزئیات مینیمال لوکس
