@@ -1,66 +1,139 @@
-/* Styles simples et élégants pour Les Pâtisseries de Lida 
-:root{
+/* 🌸 Les Pâtisseries de Lida – Palette Élégante et Douce */
+:root {
+  --navy: #1a2238;      /* سورمه‌ای شیک */
+  --pink: #f8e9ec;      /* صورتی رنگ‌پریده */
+  --coffee: #d2bba0;    /* قهوه‌ای کمرنگ */
+  --cream: #fdf6ed;     /* کرمی روشن */
+  --black: #0e0e0e;     /* سیاه لوکس */
+
   --bg: var(--cream);
   --ink: var(--black);
   --accent: var(--coffee);
   --accent-2: var(--pink);
-  --muted:#6b7280;
-  --accent:#cda47a;
-  --accent-2:#f5e6d4;
-  --navy: #1a2238;
-  --pink: #f8e9ec;
-  --coffee: #d2bba0;
-  --cream: #fdf6ed;
-  --black: #0e0e0e;
-}*/
-  :root {
-  --navy: #1a2238;
-  --pink: #f8e9ec;
-  --coffee: #d2bba0;
-  --cream: #fdf6ed;
-  --black: #0e0e0e;
-
-  /* تنظیم رنگ‌های کلی سایت */
-  --bg: var(--cream);
-  --ink: var(--black);
-  --accent: var(--coffee);
-  --accent-2: var(--pink);
-  --muted:#6b7280
-  }
 }
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
-  color:var(--ink);
-  background:var(--bg);
-  line-height:1.6;
+
+/* ساختار کلی صفحه */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
 }
-.display{font-family:'Playfair Display', serif}
-.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
-.hero{
-  background: radial-gradient(1200px 300px at 50% -10%, var(--accent-2), transparent), #fff;
-  border-bottom:1px solid rgba(0,0,0,.06);
-  text-align:center;
-  padding:40px 0 24px;
+
+/* ✨ بخش قهرمان (Hero) */
+.hero {
+  background: linear-gradient(180deg, var(--navy) 0%, var(--coffee) 100%);
+  color: #fff;
+  text-align: center;
+  padding: 60px 16px 40px;
+  border-bottom: 4px solid var(--accent);
 }
-.logo{width:180px;height:auto;display:block;margin:0 auto 10px}
-h1{margin:0;font-size:40px}
-.subtitle{margin:6px 0 14px;color:var(--muted)}
-.nav{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:8px}
-.nav a{color:#111;text-decoration:none;border:1px solid rgba(0,0,0,.08);padding:8px 12px;border-radius:999px}
-.nav a:hover{background:#111;color:#fff}
 
-.section{padding:42px 0}
-.section.alt{background:#fffefb;border-top:1px solid rgba(0,0,0,.05);border-bottom:1px solid rgba(0,0,0,.05)}
-h2{margin:0 0 10px;font-size:28px}
-p{color:#374151;margin:8px 0}
-.cards{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;padding:0;margin:18px 0 0}
-.cards li{border:1px solid rgba(0,0,0,.08);border-radius:16px;padding:14px;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.03)}
-.cards h3{margin:0 0 6px;font-size:18px}
+.logo {
+  width: 180px;
+  height: auto;
+  display: block;
+  margin: 0 auto 14px;
+  border-radius: 8px;
+}
 
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:12px}
-.gallery img{width:100%;height:220px;object-fit:cover;border-radius:14px;border:1px solid rgba(0,0,0,.08);box-shadow:0 1px 2px rgba(0,0,0,.03)}
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin: 10px 0;
+  letter-spacing: 0.5px;
+}
 
-.contact a{color:#111}
-.footer{border-top:1px solid rgba(0,0,0,.06);padding:20px 0;text-align:center;color:#6b7280;font-size:14px;background:#fff}
+.subtitle {
+  color: var(--accent-2);
+  font-size: 18px;
+  margin: 8px 0 20px;
+}
+
+/* 🍰 منو */
+.nav {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav a:hover {
+  background: var(--accent-2);
+  color: var(--black);
+}
+
+/* 🧁 بخش‌های محتوا */
+.section {
+  padding: 60px 16px;
+}
+
+.section.alt {
+  background: var(--pink);
+  border-top: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  color: var(--navy);
+  margin-bottom: 14px;
+}
+
+p {
+  color: var(--ink);
+  max-width: 700px;
+  margin: 10px auto;
+}
+
+/* 🪞 گالری */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 📞 بخش تماس */
+.contact a {
+  color: var(--navy);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: var(--accent);
+}
+
+/* 🍮 فوتر */
+.footer {
+  background: var(--navy);
+  color: var(--cream);
+  text-align: center;
+  padding: 24px 10px;
+  font-size: 14px;
+  border-top: 3px solid var(--coffee);
+}
