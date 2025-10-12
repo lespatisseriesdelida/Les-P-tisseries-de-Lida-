@@ -139,9 +139,10 @@ p {
   border-top: 3px solid var(--coffee);
 }
 
-/* برای کارتها */
+/* کارت کتگوری‌ها */
 .cat-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   border: 1px solid rgba(0,0,0,0.08);
   border-radius: 14px;
   overflow: hidden;
@@ -149,18 +150,32 @@ p {
   background: #fff;
   transition: transform .15s ease, box-shadow .15s ease;
 }
+
 .cat-card img {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
+  /* یکی از این دو گزینه را انتخاب کن: */
+
+  /* گزینه A: نسبت 4:3 (معمول و تمیز) */
+  aspect-ratio: 4 / 3;
+  height: auto;
+
+  /* اگر خواستی مربع باشد، گزینه پایین را جایگزین کن:
+  aspect-ratio: 1 / 1;
+  */
+
+  object-fit: cover;    /* کراپ زیبا بدون کشیدگی */
   display: block;
 }
+
+/* عنوان کارت */
 .cat-card h3 {
   margin: 10px 12px 14px;
   color: var(--navy);
   font-size: 18px;
 }
+
 .cat-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(0,0,0,.08);
 }
+
