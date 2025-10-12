@@ -5,11 +5,13 @@
   --coffee: #d2bba0;    /* قهوه‌ای کمرنگ */
   --cream: #fdf6ed;     /* کرمی روشن */
   --black: #0e0e0e;     /* سیاه لوکس */
-
+  --hover: #b68b2e;
   --bg: var(--cream);
   --ink: var(--black);
-  --accent: var(--coffee);
+  --accent: #caa24d;     /* طلایی اصلی */
+  /* --accent: var(--coffee); */
   --accent-2: var(--pink);
+  --accent-light: #f5e7c4;       /*طلایی روشن */
 }
 
 /* ساختار کلی صفحه */
@@ -63,8 +65,19 @@ h1 {
   margin-top: 10px;
 }
 
+/* لینک و دکمه‌ها */
+a{
+  color: var(--accent) ;
+  text-decoration: none;
+  transition: 0.3s;
+}
+a: hover {
+  color: var(--hover);
+}
+  
 .nav a {
-  color: #fff;
+  background-color: var(--accent-light);
+  color: var(--dark);
   text-decoration: none;
   border: 1px solid rgba(255,255,255,0.3);
   padding: 8px 14px;
@@ -74,7 +87,7 @@ h1 {
 
 .nav a:hover {
   background: var(--accent-2);
-  color: var(--black);
+  color: white;
 }
 
 /* 🧁 بخش‌های محتوا */
@@ -138,6 +151,14 @@ p {
   padding: 24px 10px;
   font-size: 14px;
   border-top: 3px solid var(--coffee);
+}
+
+/*کارت‌ها یا گالری */
+.cards li, .galerie img {
+  backgroun-color: var(--cream);
+  border-radius: 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.05);
 }
 
 /* کارت کتگوری‌ها */
