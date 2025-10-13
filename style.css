@@ -208,6 +208,43 @@ p {
   box-shadow: 0 6px 18px rgba(0,0,0,.08);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/* دکمه قرصی سفید با قاب طلایی */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.8rem;
+  margin: 0 0.6rem;
+  background: linear-gradient(#ffffff, #f8f8f8);
+  border: 2px solid #d6a63a;
+  border-radius: 999px; /* قرصی */
+  color: #000;
+  font-family: 'Great Vibes', cursive;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow:
+    0 0 15px rgba(214,166,58,0.3),
+    inset 0 3px 6px rgba(255,255,255,0.4);
+  transition: all 0.3s ease;
+}
+
+/* افکت هنگام هاور */
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 25px rgba(214,166,58,0.6),
+    inset 0 3px 6px rgba(255,255,255,0.6);
+}
+
+/* چینش دکمه‌ها در کنار هم */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
 
 /* بیس دکمه */
 .btn{
