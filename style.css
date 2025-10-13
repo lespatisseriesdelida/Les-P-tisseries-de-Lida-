@@ -242,8 +242,12 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  flex-wrap: wrap; /* اجازه بده برن خط بعد */
+  gap: 0.7rem;
   margin-top: 1.5rem;
+  padding: 0 1rem;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 
@@ -255,10 +259,12 @@ p {
   --padY: .8rem;
   --padX: 1.6rem;
 
-  display:inline-flex; align-items:center; justify-content:center;
+  display: inline-block;
+  background: linear-gradient(#ffffff, #f8f8f8);
   font:600 16px/1.1 system-ui,-apple-system,Segoe UI,Roboto;
   padding: var(--padY) var(--padX);
   color: var(--fg); text-decoration:none; letter-spacing:.2px;
+  border: 2px solid #d6a63a;
   border-radius: var(--radius);
   position:relative; isolation:isolate;
   /* تکنیک بوردر طلایی */
@@ -271,7 +277,9 @@ p {
     inset 0 10px 18px rgba(255,255,255,.35),
     inset 0 -12px 22px rgba(0,0,0,.10),
     0 10px 22px rgba(0,0,0,.10);
-  transition:transform .15s ease, box-shadow .2s ease, filter .2s ease;
+  transition:all 0.3s ease, box-shadow .2s ease, filter .2s ease;
+white-space: nowrap; /* نذار متن داخل دکمه بشکنه */
+
 }
 
 .btn::before{ left:10px; top:50%; translate:0 -50%; }
@@ -284,6 +292,22 @@ p {
   0 14px 26px rgba(0,0,0,.14);}
 .btn:active{ transform:translateY(0); filter:saturate(1.05); }
 .btn:focus-visible{ outline:3px solid #fff3; outline-offset:3px; }
+
+
+@media (max-width: 1000px) {
+  .btn { font-size: 22px; padding: 0.5rem 1.3rem; }
+}
+@media (max-width: 800px) {
+  .btn { font-size: 20px; padding: 0.45rem 1.1rem; }
+}
+@media (max-width: 600px) {
+  .btn { font-size: 18px; padding: 0.4rem 1rem; }
+}
+@media (max-width: 450px) {
+  .btn { font-size: 17px; padding: 0.4rem 0.9rem; }
+}
+
+
 
 /* واریانت‌ها */
 .btn--white{ --bg: var(--white); --fg: var(--ink); }
