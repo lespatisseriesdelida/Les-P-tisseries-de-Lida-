@@ -223,16 +223,17 @@ p {
   font-size: 24px;
   text-decoration: none;
   box-shadow:
-    0 0 15px rgba(214,166,58,0.3),
-    inset 0 3px 6px rgba(255,255,255,0.4);
+    0 0 15px rgba(214,166,58,0.45), /* نور طلایی اطراف */
   transition: all 0.3s ease;
+  position: relative;
 }
+    
 
 /* افکت هنگام هاور */
 .btn:hover {
   transform: translateY(-2px);
   box-shadow:
-    0 0 25px rgba(214,166,58,0.6),
+    0 0 25px rgba(214,166,58,0.7),
     inset 0 3px 6px rgba(255,255,255,0.6);
 }
 
