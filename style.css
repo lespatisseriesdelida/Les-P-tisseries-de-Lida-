@@ -137,7 +137,8 @@ p { color: var(--ink); max-width: 700px; margin: 10px auto; }
 }
 .cat-card img {
   width: 100%;
-  aspect-ratio: 4 / 3;   /* کارت‌های کتگوری 4:3 */
+  /* aspect-ratio: 4 / 3;/*   /* کارت‌های کتگوری 4:3 */
+  aspect-ratio: 1 / 1;
   height: auto;
   object-fit: cover;
   display: block;
