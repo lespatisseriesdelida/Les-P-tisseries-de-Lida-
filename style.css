@@ -92,10 +92,11 @@ a:hover { color: var(--hover); }
   border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Great Vibes, cursive;
   font-size: 20px;
   color: var(--navy);
   margin-bottom: 44px;
+  padding: 40px 40px;
 }
 p { color: var(--ink); max-width: 700px; margin: 10px auto; }
 
