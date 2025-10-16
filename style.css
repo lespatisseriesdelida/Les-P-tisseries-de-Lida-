@@ -67,7 +67,7 @@ h1 {
 /* زیرتیتر در هدر (اگر استفاده شود) */
 .subtitle {
   text-align: center;
-  max-width: 800px;
+ /* max-width: 800px;  */
   color: var(--black);
   font-size: 18px;
   margin: 0 auto;  /*  برای وسط قرار گرفتن در صفحه */
