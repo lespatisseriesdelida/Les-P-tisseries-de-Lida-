@@ -1,90 +1,45 @@
-/* ========== Les Pâtisseries de Lida — Clean CSS ========== */
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-@media (max-width: 600px) {
-  body { font-size: 15px; }
-  h1 { font-size: 30px; }
-  h2 { font-size: 24px; }
-  h3 { font-size: 18px; }
-}
+/* ========== Les Pâtisseries de Lida — CSS تمیز شده و توضیح‌دار ========== */
+
+/* فقط یک‌بار ایمپورت فونت دست‌نویس (برای نوشته‌های امضایی/لوکس) */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
-/* فونت دست‌نویس کلاسیک و لوکس، برای دکمه‌ها یا لوگو 
-.handwritten {
-  font-family: 'Great Vibes', cursive;
-  font-size: 28px;
-  color: #b68b2e; /* طلایی زیبا */
-  /* text-shadow: 0 0 6px rgba(182,139,46,0.3);
-} */
-/* اگر بخوای حس دوستانه‌تر یا شیرینی‌پزی خانگی داشته باشی */
-
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap');
-
-.handwritten {
-  font-family: 'Dancing Script', cursive;
-  font-size: 25px;
-  color: var(--accent);
-}
-/* حذف بولت‌های لیست کارت‌ها */
-ul.cards {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-
-/* اطمینان: روی li هم خاموش کنیم */
-ul.cards li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* استایل کارت و تصاویر گالری (با سِلکتور صحیح) */
-.cards li,
-.gallery img {
-  background-color: var(--cream);
-  border-radius: 16px; /* گردی گوشه کارتها */
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-  border: 1px solid rgba(0,0,0,0.1);
-}
-/* فونت مخصوص برندهای فرانسوی */
-
-@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
-
-.handwritten {
-  font-family: 'Parisienne', cursive;
-  font-size: 27px;
-  color: var(--accent);
-}
-/* پالت و متغیرها */
+/* -------------------- متغیرهای رنگ برند -------------------- */
+/* پالت رنگ؛ اگر جایی بخوای رنگ را تغییر بدی، اینجا عوض کن */
 :root {
-  --navy: #1a2238;      /* سورمه‌ای شیک */
-  --pink: #f8e9ec;      /* صورتی رنگ‌پریده */
-  --coffee: #d2bba0;    /* قهوه‌ای کمرنگ */
-  --cream: #fdf6ed;     /* کرمی روشن */
-  --black: #0e0e0e;     /* سیاه لوکس */
-  --dark: #1c1b1a;      /* برای متن‌های تیره در ناوبری */
-  --hover: #b68b2e;     /* هاور لینک‌ها */
-  --bg: var(--cream);
-  --ink: var(--black);
-  --accent: #caa24d;          /* طلایی اصلی */
-  --accent-2: var(--pink);
-  --accent-light: #f5e7c4;    /* طلایی روشن */
-  --gold-1:#f9e29c; --gold-2:#d6a63a; --gold-3:#8a6a1f; /* برای درخشش طلایی */
+  --navy: #1a2238;         /* سورمه‌ای شیک برای تیترها/هدِر */
+  --pink: #f8e9ec;         /* صورتی خیلی لطیف برای بخش‌های آلترناتیو */
+  --coffee: #d2bba0;       /* قهوه‌ای روشن (فوتر/بوردر) */
+  --cream: #fdf6ed;        /* پس‌زمینه‌ی اصلی سایت */
+  --black: #0e0e0e;        /* رنگ متن اصلی */
+  --dark: #1c1b1a;         /* متن تیره روی دکمه‌های روشن */
+  --hover: #b68b2e;        /* رنگ هاور لینک‌ها */
+  --bg: var(--cream);      /* بک‌گراند کل سایت */
+  --ink: var(--black);     /* رنگ متن عمومی */
+  --accent: #caa24d;       /* طلایی اصلی برند */
+  --accent-2: var(--pink); /* صورتی برای زیرتیتر هدر */
+  --accent-light: #f5e7c4; /* طلایی روشن برای دکمه‌های قرصی */
+  --gold-1:#f9e29c; --gold-2:#d6a63a; --gold-3:#8a6a1f; /* درجات طلا */
   --white:#ffffff;
 }
 
-/* پایه صفحه */
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
+/* -------------------- ریست و پایه‌ی صفحه -------------------- */
+* { box-sizing: border-box; }                  /* محاسبه‌ی منطقی اندازه‌ها */
+html, body { margin: 0; padding: 0; }         /* حذف فاصله‌ی پیش‌فرض مرورگر */
+
 body {
+  /* فونت متن‌های عمومی: Inter (با لینک در HTML لود شده) */
   font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 18px;
+  font-size: 17px;                             /* اندازه‌ی خوانا برای پاراگراف‌ها */
+  line-height: 1.7;                            /* فاصله‌ی مناسب بین خطوط */
   color: var(--ink);
   background: var(--bg);
-  line-height: 1.6;
 }
 
-/* هدر */
+/* لینک‌ها: طلایی ملایم با هاور طلایی عمیق‌تر */
+a { color: var(--accent); text-decoration: none; transition: .3s; }
+a:hover { color: var(--hover); }
+
+/* -------------------- هدر (Hero) -------------------- */
 .hero {
   background: var(--navy);
   color: #fff;
@@ -92,178 +47,169 @@ body {
   padding: 40px 16px 40px;
   border-bottom: 4px solid var(--accent);
 }
+
 .logo {
-  width: 180px;
-  height: auto;
+  width: 180px; height: auto;
   display: block;
   margin: 0 auto 14px;
-  border-radius: 8px;
-}
-h1 {
-  font-family: 'Great Vibes, cursive;
-  font-size: 25px;
-  margin: 25px auto;
-  letter-spacing: 0.5px;
-}
-.subtitle {
-  color: var(--accent-2);
-  font-size: 25px;
-  margin: 20px 0 20px;
+  border-radius: 8px;                           /* گوشه‌های نرم لوگو */
 }
 
-/* ناوبری ساده (بالا) */
-.nav {
-  display: flex; /* یعنی دکمه‌ها مرتب کنار هم قرار بگیرند */
-  gap: 16px; /* فاصله بین دکماها */
-  justify-content: center; /* قرار گیری دکمه‌ها در وسط تصور */
-  flex-wrap: wrap; /* جا کم بود ، برو خط بعد */
-  margin-top: 10px;
-}
-.nav a { /* مشخصات هر دکمه */
-  background-color: var(--accent-light);
-  color: var(--dark);
-  text-decoration: none;
-  border: 1px solid rgba(255,255,255,0.3);
-  padding: 8px 14px;
-  border-radius: 999px;
-  transition: all 0.2s ease-in-out;
-}
-.nav a:hover {
-  background: var(--accent-2);
+/* عنوان اصلی سایت (در هدر) با فونت دست‌نویس لوکس */
+h1 {
+  font-family: 'Great Vibes', cursive;          /* ← قبلاً یک باگ نقل‌قول داشت */
+  font-size: 40px;                              /* اندازه مناسب دسکتاپ */
+  margin: 18px auto;
+  letter-spacing: 0.3px;
   color: #fff;
 }
 
-/* لینک‌های عمومی */
-a { color: var(--accent); text-decoration: none; transition: .3s; }
-a:hover { color: var(--hover); }
+/* زیرتیتر در هدر (اگر استفاده شود) */
+.subtitle {
+  color: var(--accent-2);
+  font-size: 18px;
+  margin: 12px 0 18px;
+}
 
-/* سکشن‌ها */
-.section { padding: 60px 16px; }
+/* -------------------- ناوبری قرصی بالای هدر -------------------- */
+/* از .nav-buttons در HTML استفاده کرده‌ای؛ .nav ساده حذف شد */
+.nav-buttons {
+  display:flex; justify-content:center; align-items:center;
+  flex-wrap:wrap; gap:1rem; margin-top:1.2rem; padding:0 1rem;
+  max-width:100%;
+}
+.btn {                                          /* دکمه‌های قرصی سفید براق */
+  display:inline-block; white-space:nowrap;
+  padding:.6rem 1.6rem; margin:0 .6rem;
+  background: linear-gradient(#ffffff, #f6f6f6);
+  border: 2px solid #d6a63a; border-radius:999px;
+  color:#000; font-family:'Great Vibes', cursive; font-size:22px;
+  text-decoration:none; box-shadow:0 0 12px rgba(214,166,58,.45);
+  transition: all .3s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(214,166,58,.7), inset 0 3px 6px rgba(255,255,255,.6);
+}
+
+/* ریسپانسیو دکمه‌ها */
+@media (max-width: 1000px){ .btn{ font-size: 21px; padding: .5rem 1.3rem; } }
+@media (max-width: 800px){  .btn{ font-size: 19px; padding: .45rem 1.1rem; } }
+@media (max-width: 600px){  .btn{ font-size: 18px; padding: .4rem 1rem; } }
+
+/* -------------------- ساختار سکشن‌ها -------------------- */
+.section { padding: 56px 16px; }                /* فضای عمودی بخش‌ها */
 .section.alt {
   background: var(--pink);
-  border-top: 1px solid rgba(0,0,0,0.05);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(0,0,0,.05);
+  border-bottom: 1px solid rgba(0,0,0,.05);
 }
-h2 {
-  font-family: 'Great Vibes', cursive;
-  text-align: center;
-  font-size: 30px;
-  color: var(--navy);
-  margin: auto;
-/*  margin-bottom: 44px;
-  padding: 40px 40px; */
-}
-p {
-  font-size: 30px;
-  color: var(--ink); 
-  max-width: 700px; 
-  margin: 25px 22px auto; }
 
-/* گالری شبکه‌ای */
+/* تیترهای رسمی بخش‌ها با Playfair (از HTML لود شده) */
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: var(--navy);
+  text-align: center;
+  margin: 0 auto 18px;                          /* وسط‌چین + فاصله پایین */
+  letter-spacing: .3px;
+}
+
+/* پاراگراف‌ها: خوانا و محدود به عرض مناسب */
+p {
+  font-size: 17px;
+  color: var(--ink);
+  max-width: 760px;
+  margin: 10px auto;                            /* وسط‌چین با حاشیه افقی خودکار */
+}
+
+/* تیتر امضایی/لوکس (برای: Les créations de Lida و عناوین خاص) */
+.handwritten {
+  font-family: 'Great Vibes', cursive;
+  font-size: 22px;                              /* Great Vibes دیداری بزرگه؛ 22px مناسبه */
+  line-height: 1.25;
+  color: var(--accent);
+  text-align: center;
+  margin: 6px auto 4px;
+}
+
+/* -------------------- گالری شبکه‌ای -------------------- */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* ردیف‌های واکنش‌گرا */
   gap: 24px;
   margin-top: 20px;
 }
 .gallery img {
   width: 100%;
-  aspect-ratio: 1/1;          /* همه مربع و یکدست */
-  object-fit: contain;          /* کراپ تمیز بدون کشیدگی */
+  aspect-ratio: 1/1;            /* همه مربع و یکدست */
+  object-fit: cover;            /* پر کردن قاب بدون حاشیه (ممکنه کمی کراپ شود) */
   border-radius: 14px;
   border: 1px solid rgba(0,0,0,.08);
   box-shadow: 0 1px 2px rgba(0,0,0,.03);
   background-color: #fffaf6;
 }
 
-/* کارت‌های لیست/گالری */
-.cards li, .gallery img {
-  list-style-type: none;
-  list-style: none;
-  list-style-position: outside;
-  padding-left: 0;
+/* -------------------- کارت‌های لیست (ul.cards > li) -------------------- */
+/* حذف بولت‌ها از خود ul و آیتم‌ها */
+ul.cards { list-style: none; margin: 0; padding: 0; }
+ul.cards li { list-style: none; margin: 0 0 16px; padding: 20px 16px; }
+
+.cards li {
   background-color: var(--cream);
-  border-radius: 16px; /* گردی گوشه کارتها */
+  border-radius: 16px;                          /* گردی گوشه کارتها */
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.08);
+  text-align: center;
 }
 
-/* کارت کتگوری روی صفحه اصلی */
+/* تیتر داخل کارت‌ها */
+.cards li h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--navy);
+  font-size: 20px;
+  margin: 0 0 8px;
+}
+
+/* -------------------- کارت‌های دسته‌بندی (گالری اصلی) -------------------- */
 .cat-card {
-  display: flex;
-  flex-direction: column;
+  display: flex; flex-direction: column;
   border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 14px;
-  overflow: hidden;
-  text-decoration: none;
-  background: #fff;
+  border-radius: 14px; overflow: hidden;
+  text-decoration: none; background: #fff;
   transition: transform .15s ease, box-shadow .15s ease;
-  font-family: 'Great Vibes', cursive;
 }
 .cat-card img {
   width: 100%;
-  /* aspect-ratio: 4 / 3;/*   /* کارت‌های کتگوری 4:3 */
-  aspect-ratio: 1 / 1;
-  height: auto;
-  object-fit: cover;
-  display: block;
+  aspect-ratio: 1 / 1;            /* مربع یکسان برای شبکه‌ی گالری */
+  height: auto; object-fit: cover; display: block;
 }
 .cat-card h3 {
-  margin: auto;
-  /*  margin: 30px 12px 24px; */
+  margin: 10px 12px 14px;         /* فاصله‌ی منظم زیر عکس */
   color: var(--navy);
-  font-size: 50px;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;                 /* 50px خیلی بزرگ بود؛ به اندازه‌ی کارت تنظیم شد */
+  text-align: center;
 }
 .cat-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(0,0,0,.08);
 }
 
-/* دکمه‌های قرصی سفید لوکس (Galerie / Contact) */
-.nav-buttons {
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:1rem;
-  margin-top:1.5rem;
-  padding:0 1rem;
-  max-width:100%;
-  box-sizing:border-box;
-}
-.btn {
-  display: inline-block;
-  padding: 0.6rem 1.6rem;
-  margin: 0 0.6rem;
-  background: linear-gradient(#ffffff, #f6f6f6);
-  border: 2px solid #d6a63a;
-  border-radius: 999px;
-  color: #000;
-  font-family: 'Great Vibes', cursive;
-  font-size: 22px;
-  text-decoration: none;
-  box-shadow: 0 0 12px rgba(214,166,58,0.45);
-  transition: all 0.3s ease;
-  white-space: nowrap;
-}
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow:
-    0 0 25px rgba(214,166,58,0.7),
-    inset 0 3px 6px rgba(255,255,255,0.6);
-}
-
-/* ریسپانسیو برای دکمه‌ها */
-@media (max-width: 1000px){ .btn{ font-size: 21px; padding: .5rem 1.3rem; } }
-@media (max-width: 800px){  .btn{ font-size: 19px; padding: .45rem 1.1rem; } }
-@media (max-width: 600px){  .btn{ font-size: 18px; padding: .4rem 1rem; } }
-
-/* فوتر */
+/* -------------------- فوتر -------------------- */
 .footer {
   background: var(--navy);
   color: var(--cream);
   text-align: center;
   padding: 24px 10px;
-  font-size: 22px;
+  font-size: 14px;                 /* اندازه‌ی استاندارد فوتر */
   border-top: 3px solid var(--coffee);
+}
+
+/* -------------------- تایپوگرافی واکنش‌گرا -------------------- */
+@media (max-width: 600px) {
+  body { font-size: 15px; }        /* متن کمی کوچک‌تر روی موبایل */
+  h1 { font-size: 30px; }          /* عنوان هدر روی موبایل */
+  h2 { font-size: 24px; }
+  h3 { font-size: 18px; }
 }
