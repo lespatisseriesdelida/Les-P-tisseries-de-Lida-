@@ -31,7 +31,7 @@ body {
   font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 17px;                             /* اندازه‌ی خوانا برای پاراگراف‌ها */
   line-height: 1.7;                            /* فاصله‌ی مناسب بین خطوط */
-  color: var(--ink);
+  color: var(--black);
   background: var(--bg);
 }
 
