@@ -65,7 +65,7 @@ body {
   background: var(--navy);
   color: #fff;
   text-align: center;
-  padding: 60px 16px 40px;
+  padding: 40px 16px 40px;
   border-bottom: 4px solid var(--accent);
 }
 .logo {
@@ -89,13 +89,13 @@ h1 {
 
 /* ناوبری ساده (بالا) */
 .nav {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: flex; /* یعنی دکمه‌ها مرتب کنار هم قرار بگیرند */
+  gap: 16px; /* فاصله بین دکماها */
+  justify-content: center; /* قرار گیری دکمه‌ها در وسط تصور */
+  flex-wrap: wrap; /* جا کم بود ، برو خط بعد */
   margin-top: 10px;
 }
-.nav a {
+.nav a { /* مشخصات هر دکمه */
   background-color: var(--accent-light);
   color: var(--dark);
   text-decoration: none;
@@ -120,11 +120,12 @@ a:hover { color: var(--hover); }
   border-top: 1px solid rgba(0,0,0,0.05);
   border-bottom: 1px solid rgba(0,0,0,0.05);
 }
-.section h2 {
+h2 {
   font-family: 'Great Vibes', cursive;
   text-align: center;
-  font-size: 25px;
+  font-size: 28px;
   color: var(--navy);
+  margin: auto;
 /*  margin-bottom: 44px;
   padding: 40px 40px; */
 }
@@ -149,10 +150,14 @@ p { color: var(--ink); max-width: 700px; margin: 25px 22px auto; }
 
 /* کارت‌های لیست/گالری */
 .cards li, .gallery img {
+  list-style-type: none;
+  list-style: none;
+  list-style-position: outside;
+  padding-left: 0;
   background-color: var(--cream);
-  border-radius: 16px;
+  border-radius: 16px; /* گردی گوشه کارتها */
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-  border: 1px solid rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.1);
 }
 
 /* کارت کتگوری روی صفحه اصلی */
@@ -176,10 +181,10 @@ p { color: var(--ink); max-width: 700px; margin: 25px 22px auto; }
   display: block;
 }
 .cat-card h3 {
-  
-  margin: 30px 12px 24px;
+  margin: auto;
+  /*  margin: 30px 12px 24px; */
   color: var(--navy);
-  font-size: 18px;
+  font-size: 20px;
 }
 .cat-card:hover {
   transform: translateY(-2px);
