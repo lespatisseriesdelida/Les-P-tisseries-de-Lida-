@@ -3,13 +3,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
-/* فونت دست‌نویس کلاسیک و لوکس، برای دکمه‌ها یا لوگو */
+/* فونت دست‌نویس کلاسیک و لوکس، برای دکمه‌ها یا لوگو 
 .handwritten {
   font-family: 'Great Vibes', cursive;
   font-size: 28px;
   color: #b68b2e; /* طلایی زیبا */
   text-shadow: 0 0 6px rgba(182,139,46,0.3);
-}
+} */
 /* اگر بخوای حس دوستانه‌تر یا شیرینی‌پزی خانگی داشته باشی */
 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap');
@@ -127,7 +127,7 @@ h2 {
   margin-bottom: 44px;
   padding: 40px 40px;
 }
-p { color: var(--ink); max-width: 700px; margin: 25px auto; }
+p { color: var(--ink); max-width: 700px; margin: 25px 22px auto; }
 
 /* گالری شبکه‌ای */
 .gallery {
