@@ -16,7 +16,7 @@
 
 .handwritten {
   font-family: 'Dancing Script', cursive;
-  font-size: 26px;
+  font-size: 30px;
   color: var(--accent);
 }
 /* حذف بولت‌های لیست کارت‌ها */
@@ -144,7 +144,7 @@ a:hover { color: var(--hover); }
 h2 {
   font-family: 'Great Vibes', cursive;
   text-align: center;
-  font-size: 28px;
+  font-size: 30px;
   color: var(--navy);
   margin: auto;
 /*  margin-bottom: 44px;
@@ -205,7 +205,7 @@ p { color: var(--ink); max-width: 700px; margin: 25px 22px auto; }
   margin: auto;
   /*  margin: 30px 12px 24px; */
   color: var(--navy);
-  font-size: 20px;
+  font-size: 50px;
 }
 .cat-card:hover {
   transform: translateY(-2px);
