@@ -1,6 +1,11 @@
 /* ========== Les Pâtisseries de Lida — Clean CSS ========== */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-
+@media (max-width: 600px) {
+  body { font-size: 15px; }
+  h1 { font-size: 30px; }
+  h2 { font-size: 24px; }
+  h3 { font-size: 18px; }
+}
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 /* فونت دست‌نویس کلاسیک و لوکس، برای دکمه‌ها یا لوگو 
@@ -59,13 +64,11 @@ ul.cards li {
   --black: #0e0e0e;     /* سیاه لوکس */
   --dark: #1c1b1a;      /* برای متن‌های تیره در ناوبری */
   --hover: #b68b2e;     /* هاور لینک‌ها */
-
   --bg: var(--cream);
   --ink: var(--black);
   --accent: #caa24d;          /* طلایی اصلی */
   --accent-2: var(--pink);
   --accent-light: #f5e7c4;    /* طلایی روشن */
-
   --gold-1:#f9e29c; --gold-2:#d6a63a; --gold-3:#8a6a1f; /* برای درخشش طلایی */
   --white:#ffffff;
 }
@@ -74,8 +77,8 @@ ul.cards li {
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 body {
-  font-family: 'Great Vibes', cursive, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-family: 'Great Vibes', cursive; /*-apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;*/
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 18px;
   color: var(--ink);
   background: var(--bg);
   line-height: 1.6;
