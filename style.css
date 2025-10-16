@@ -19,7 +19,28 @@
   font-size: 26px;
   color: var(--accent);
 }
+/* حذف بولت‌های لیست کارت‌ها */
+ul.cards {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
 
+/* اطمینان: روی li هم خاموش کنیم */
+ul.cards li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* استایل کارت و تصاویر گالری (با سِلکتور صحیح) */
+.cards li,
+.gallery img {
+  background-color: var(--cream);
+  border-radius: 16px; /* گردی گوشه کارتها */
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.1);
+}
 /* فونت مخصوص برندهای فرانسوی */
 
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
