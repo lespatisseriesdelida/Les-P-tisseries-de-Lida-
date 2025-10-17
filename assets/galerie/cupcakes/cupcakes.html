@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cupcakes — Les Pâtisseries de Lida</title>
+  <meta name="description" content="Cupcakes personnalisés — saveurs, décors, tailles et tarifs par Les Pâtisseries de Lida.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1a2238;--pink:#f8e9ec;--cream:#fdf6ed;--black:#0e0e0e;--accent:#caa24d;--hover:#b68b2e;--white:#ffffff}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--cream);color:var(--black);font-family:'Inter',system-ui,sans-serif;line-height:1.7}
+    .wrap{max-width:1000px;margin:0 auto;padding:24px}
+    header{background:var(--navy);color:#fff;text-align:center;padding:30px 16px;border-bottom:4px solid var(--accent);border-radius:12px 12px 0 0}
+    .logo{width:160px;display:block;margin:0 auto 12px;border-radius:8px}
+    h1{font-family:'Great Vibes',cursive;font-size:38px;margin:8px 0;color:#fff}
+    .badge{background:var(--accent);color:var(--navy);display:inline-block;padding:6px 14px;border-radius:999px;font-weight:600;font-size:14px;margin-top:8px}
+    main.card{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:0 0 16px 16px;padding:32px;box-shadow:0 6px 16px rgba(0,0,0,0.06);margin-top:-4px}
+    h2{font-family:'Playfair Display',serif;color:var(--navy);margin-top:28px;font-size:22px;text-align:center}
+    p.lead{color:var(--black);text-align:center;font-size:18px;margin-bottom:20px}
+    p,ul{font-size:17px;margin:10px auto;max-width:760px}
+    ul{padding-left:20px}
+    .cta{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:28px 0 10px}
+    .btn{display:inline-block;background:linear-gradient(#fff7dc,var(--accent));border:2px solid var(--accent);color:var(--navy);border-radius:999px;padding:10px 24px;text-decoration:none;font-family:'Great Vibes',cursive;font-size:22px;box-shadow:0 0 14px rgba(214,166,58,.45);transition:all .3s ease}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 0 25px rgba(214,166,58,.7)}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+    .gallery img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;border:1px solid rgba(0,0,0,.08);background-color:#fffaf6;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+    footer{text-align:center;color:var(--navy);font-size:14px;margin-top:32px;padding-top:20px;border-top:1px solid rgba(0,0,0,.08)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="images/logo.jpg" alt="Logo Les Pâtisseries de Lida" class="logo">
+      <h1>Les Pâtisseries de Lida</h1>
+      <div class="badge">Cupcakes</div>
+    </header>
+
+    <main class="card" role="main">
+      <p class="lead">Moelleux, élégants et terriblement gourmands, nos <strong>cupcakes</strong> sont parfaits pour toutes les occasions&nbsp;: anniversaires, baby showers, événements d’entreprise ou petites attentions qui font grand effet.</p>
+
+      <h2>Saveurs & bases</h2>
+      <ul>
+        <li><strong>Bases</strong>&nbsp;: vanille, chocolat, red velvet, pistache, citron.</li>
+        <li><strong>Crèmes</strong>&nbsp;: chantilly mascarpone, ganache montée (vanille, chocolat blanc/noir), crème au beurre meringue suisse.</li>
+        <li><strong>Décors</strong>&nbsp;: fleurs en crème, sprinkles, toppers personnalisés, mini-macarons, fruits frais.</li>
+      </ul>
+
+      <h2>Galerie</h2>
+      <div class="gallery">
+        <img src="images/cupcakes/1.jpg" alt="Cupcakes vanille décor fleuri">
+        <img src="images/cupcakes/2.jpg" alt="Cupcakes chocolat avec toppers personnalisés">
+        <img src="images/cupcakes/3.jpg" alt="Cupcakes red velvet">
+        <img src="images/cupcakes/4.jpg" alt="Assortiment cupcakes pastel">
+        <img src="images/cupcakes/5.jpg" alt="Cupcakes thème anniversaire enfant">
+      </div>
+
+      <div class="cta">
+        <a class="btn" href="#">Demander un devis</a>
+        <a class="btn" href="#">Voir plus de photos</a>
+      </div>
+
+      <footer>© Les Pâtisseries de Lida — Nord (59) &amp; Pas-de-Calais (62)</footer>
+    </main>
+  </div>
+</body>
+</html>
