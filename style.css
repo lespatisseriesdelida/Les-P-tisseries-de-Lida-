@@ -215,3 +215,56 @@ ul.cards li { list-style: none; margin: 0 0 16px; padding: 20px 16px; }
   h2 { font-size: 24px; }
   h3 { font-size: 18px; }
 }
+
+/* === Scroll-to-top (لوکس با SVG) === */
+.scroll-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 99;
+  display: none;                 /* با اسکرول ظاهر می‌شود */
+  align-items: center;
+  justify-content: center;
+  width: 50px; height: 50px;
+  border: none; outline: none;
+  border-radius: 999px;
+  cursor: pointer;
+  color: var(--navy);            /* رنگ آیکون (فلش) */
+  background: linear-gradient(180deg, var(--gold-1, #f9e29c), var(--accent, #caa24d));
+  box-shadow: 0 6px 18px rgba(202,162,77,.35), inset 0 3px 6px rgba(255,255,255,.5);
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
+}
+
+.scroll-top:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(180deg, var(--accent, #caa24d), var(--hover, #b68b2e));
+  color: var(--white, #fff);
+  box-shadow: 0 10px 26px rgba(202,162,77,.55), inset 0 4px 8px rgba(255,255,255,.6);
+}
+
+.scroll-top:active {
+  transform: translateY(-1px) scale(.98);
+}
+
+.scroll-top:focus-visible {
+  outline: 2px solid rgba(202,162,77,.85);
+  outline-offset: 3px;
+}
+
+/* اندازهٔ آیکون هماهنگ با دکمه */
+.scroll-top svg { display: block; }
+
+/* احترام به کاربرانی که انیمیشن نمی‌خوان */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-top {
+    transition: none;
+  }
+  .scroll-top:hover, .scroll-top:active {
+    transform: none;
+  }
+}
+
+/* جابجایی به چپ در صفحات خیلی کوچک (اختیاری) */
+@media (max-width: 420px) {
+  .scroll-top { right: 16px; bottom: 20px; }
+}
