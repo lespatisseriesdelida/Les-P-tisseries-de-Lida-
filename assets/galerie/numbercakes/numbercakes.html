@@ -5,145 +5,169 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Les Number Cakes — Les Pâtisseries de Lida</title>
   <meta name="description" content="Les Number Cakes par Les Pâtisseries de Lida — informations, personnalisation, tailles et tarifs.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #faf9fb;
-      --text: #1b1b1f;
-      --muted: #5a5a63;
-      --brand: #b48fbf;
-      --card: #ffffff;
-      --border: #ece9f1;
+      --navy: #1a2238;
+      --pink: #f8e9ec;
+      --coffee: #d2bba0;
+      --cream: #fdf6ed;
+      --black: #0e0e0e;
+      --accent: #caa24d;
+      --hover: #b68b2e;
+      --white: #ffffff;
     }
+
     * { box-sizing: border-box; }
     html, body {
       margin: 0;
       padding: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-      line-height: 1.6;
+      background: var(--cream);
+      color: var(--black);
+      font-family: 'Inter', system-ui, sans-serif;
+      line-height: 1.7;
     }
+
     .wrap {
-      max-width: 860px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 24px;
     }
+
     header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 0 8px;
+      background: var(--navy);
+      color: #fff;
+      text-align: center;
+      padding: 30px 16px;
+      border-bottom: 4px solid var(--accent);
+      border-radius: 12px 12px 0 0;
     }
-    .brand {
-      font-weight: 700;
-      letter-spacing: .3px;
+
+    .logo {
+      width: 160px;
+      display: block;
+      margin: 0 auto 12px;
+      border-radius: 8px;
     }
-    .badge {
-      display: inline-block;
-      font-size: 12px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: #f3edf7;
-      color: #6d5a76;
-      border: 1px solid var(--border);
-    }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 4px 18px rgba(17, 12, 34, 0.06);
-    }
+
     h1 {
-      font-size: 28px;
-      line-height: 1.25;
-      margin: 0 0 12px;
+      font-family: 'Great Vibes', cursive;
+      font-size: 38px;
+      margin: 8px 0;
+      color: var(--white);
     }
+
+    .badge {
+      background: var(--accent);
+      color: var(--navy);
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    main.card {
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: 0 0 16px 16px;
+      padding: 32px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      margin-top: -4px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--navy);
+      margin-top: 28px;
+      font-size: 22px;
+      text-align: center;
+    }
+
     p.lead {
-      color: var(--muted);
-      margin-top: 0;
+      color: var(--black);
+      text-align: center;
+      font-size: 18px;
       margin-bottom: 20px;
     }
-    h2 {
-      font-size: 18px;
-      margin: 22px 0 10px;
-    }
-    ul {
-      padding-left: 18px;
-      margin: 8px 0 0;
-    }
-    .note {
-      font-size: 14px;
-      color: var(--muted);
-    }
+
+    p, ul { font-size: 17px; margin: 10px auto; max-width: 760px; }
+    ul { padding-left: 20px; }
+
     .cta {
-      margin-top: 22px;
       display: flex;
-      gap: 12px;
+      justify-content: center;
+      gap: 14px;
       flex-wrap: wrap;
+      margin: 28px 0 10px;
     }
+
     .btn {
       display: inline-block;
-      padding: 10px 16px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      background: var(--text);
-      color: #fff;
+      background: linear-gradient(#fff7dc, var(--accent));
+      border: 2px solid var(--accent);
+      color: var(--navy);
+      border-radius: 999px;
+      padding: 10px 24px;
       text-decoration: none;
-      font-weight: 600;
-      transition: transform .04s ease;
+      font-family: 'Great Vibes', cursive;
+      font-size: 22px;
+      box-shadow: 0 0 14px rgba(214,166,58,.45);
+      transition: all .3s ease;
     }
-    .btn.secondary {
-      background: #fff;
-      color: var(--text);
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 25px rgba(214,166,58,.7);
     }
-    .btn:active { transform: translateY(1px); }
+
     footer {
-      padding: 32px 0 12px;
-      color: var(--muted);
-      font-size: 13px;
       text-align: center;
+      color: var(--navy);
+      font-size: 14px;
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(0,0,0,.08);
     }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <div class="brand">Les Pâtisseries de Lida</div>
-      <span class="badge">Number Cakes</span>
+      <img src="images/logo.jpg" alt="Logo Les Pâtisseries de Lida" class="logo">
+      <h1>Les Pâtisseries de Lida</h1>
+      <div class="badge">Number Cakes</div>
     </header>
 
     <main class="card" role="main">
-      <h1>Les Number Cakes</h1>
-      <p class="lead">Hyper tendance, nos Number Cakes se déclinent sous différentes formes&nbsp;: <strong>chiffres, lettres, cercle, cœur</strong>, ou toute autre forme selon vos envies.</p>
+      <p class="lead">Hyper tendance, nos Number Cakes se déclinent sous différentes formes : <strong>chiffres, lettres, cercle, cœur</strong>, ou toute autre forme selon vos envies.</p>
 
       <h2>Tarifs</h2>
-      <p>À partir de <strong>5&nbsp;€ la part</strong> (hors personnalisation). Les décorations spécifiques et les impressions alimentaires sont proposées en supplément.</p>
+      <p>À partir de <strong>5 € la part</strong> (hors personnalisation). Les décorations spécifiques et les impressions alimentaires sont proposées en supplément.</p>
 
       <h2>Personnalisation</h2>
-      <p>Pour toute demande de devis, merci d’indiquer&nbsp;:</p>
+      <p>Pour toute demande de devis, merci d’indiquer :</p>
       <ul>
         <li>le <strong>thème</strong> ;</li>
         <li>le <strong>modèle</strong> (forme souhaitée) ;</li>
-        <li>le <strong>goût</strong> et la <strong>base</strong> (<em>génoise nature</em>, <em>génoise au chocolat</em> ou <em>sablée</em>) ;</li>
-        <li>la <strong>crème</strong> (<em>chantilly mascarpone vanille</em>, <em>ganache au chocolat blanc, noir ou au lait</em>, <em>crème pâtissière</em>, <em>crème diplomate</em>, <em>crème citron meringuée</em>) ;</li>
-        <li>les <strong>suppléments</strong> pour les plus gourmands (<em>speculoos</em>, <em>caramel beurre salé</em>, <em>coulis de fruits rouges</em>, <em>framboises</em>, <em>fraises</em>, <em>mangue</em>...).</li>
+        <li>le <strong>goût</strong> et la <strong>base</strong> (<em>génoise nature</em>, <em>chocolat</em> ou <em>sablée</em>) ;</li>
+        <li>la <strong>crème</strong> (<em>chantilly mascarpone</em>, <em>ganache</em>, <em>crème diplomate</em>...) ;</li>
+        <li>les <strong>suppléments</strong> gourmands : <em>speculoos</em>, <em>caramel beurre salé</em>, <em>fruits rouges</em>, etc.</li>
       </ul>
 
       <h2>Portions disponibles</h2>
-      <p>Possibilité de commander pour <strong>8</strong>, <strong>12</strong>, <strong>15 parts</strong>, et — selon certaines formes — <strong>au-delà de 15 parts</strong>.</p>
+      <p>Commandes possibles pour <strong>8</strong>, <strong>12</strong>, <strong>15 parts</strong>, et selon certaines formes, <strong>au-delà</strong>.</p>
 
       <div class="cta">
-        <a class="btn" href="#" aria-label="Demander un devis">Demander un devis</a>
-        <a class="btn secondary" href="#" aria-label="Voir la galerie">Voir la galerie</a>
+        <a class="btn" href="#">Demander un devis</a>
+        <a class="btn" href="#">Voir la galerie</a>
       </div>
 
-      <p class="note">Texte et tarifs donnés à titre indicatif. Pour une proposition personnalisée, merci de nous contacter.</p>
+      <footer>
+        © Les Pâtisseries de Lida — Nord (59) & Pas-de-Calais (62)
+      </footer>
     </main>
-
-    <footer>
-      © Les Pâtisseries de Lida — Nord (59) &amp; Pas-de-Calais (62)
-    </footer>
   </div>
 </body>
 </html>
