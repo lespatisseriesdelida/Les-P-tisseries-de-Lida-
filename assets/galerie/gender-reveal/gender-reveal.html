@@ -1,31 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <body>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gâteau Gender Reveal | Les Pâtisseries de Lida</title>
-
   <meta name="description" content="Gâteau Gender Reveal : intérieur rose ou bleu, chantilly mascarpone ou buttercream, déco en pâte à sucre ou en crème. Personnalisation via WhatsApp.">
-</head>
 
-
-  <!-- Hero / Header -->
-  <header class="hero">
-    <img class="logo" src="assets/mainlogo.png" alt="Logo Les Pâtisseries de Lida">
-    <h1>Les Pâtisseries de Lida</h1>
-
-    <nav class="nav-buttons">
-      <a href="#creations" class="btn">Créations</a>
-      <a href="#sale" class="btn">Salé</a>
-      <a href="#galerie" class="btn">Galerie</a>
-      <a href="#contact" class="btn">Contact</a>
-      <a class="btn btn--pill btn--white" href="#">Commander</a>    
-    </nav>
-    
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --bg: #faf6f1;
@@ -47,6 +32,7 @@
       background:radial-gradient(1200px 500px at 10% -20%, #fff 0, var(--bg) 60%), linear-gradient(180deg,#fff 0%,var(--bg) 100%);
       overflow:hidden;
       box-shadow:0 12px 30px rgba(0,0,0,.05);
+      margin-bottom: 28px;
     }
     .badge{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--accent);color:var(--primary);padding:6px 12px;border-radius:999px;font-weight:600;font-size:12px}
     h1{font-family:"Playfair Display",serif;font-weight:700;font-size:clamp(32px,5vw,48px);margin:14px 0 8px}
@@ -68,7 +54,7 @@
       border:1px solid #efe7df;
       border-radius:22px;
       padding:20px;
-      box-shadow:0 6px 16px rgba(0,0,0,.04);
+      box-shadow:0 6px 16px rgba(0,0,0,0.04);
     }
     .card h3{margin:8px 0 6px;font-size:20px}
     .list{padding-left:18px;margin:0}
@@ -81,7 +67,9 @@
       display:flex;align-items:center;justify-content:center;
       color:#a78b6c;
       font-weight:500;
+      overflow: hidden;
     }
+    .media img{width:100%;height:100%;object-fit:cover;display:block}
     .section{margin-top:32px}
     .split{display:grid;gap:22px}
     @media (min-width: 900px){.split{grid-template-columns:1.1fr .9fr;align-items:center}}
@@ -99,7 +87,8 @@
 </head>
 <body>
   <div class="container">
-    <section class="hero">
+    <header class="hero">
+      <img class="logo" src="assets/mainlogo.png" alt="Logo Les Pâtisseries de Lida" loading="lazy" style="width:120px;height:auto;display:block;margin-bottom:10px">
       <span class="badge">🎉 Gâteau Gender Reveal</span>
       <h1>Une révélation pleine d’émotion</h1>
       <p class="lead">
@@ -109,7 +98,7 @@
         <a class="btn" href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener">Commander via WhatsApp</a>
         <a class="btn outline" href="#details">Voir les détails</a>
       </div>
-    </section>
+    </header>
 
     <section id="details" class="section split">
       <div>
@@ -151,9 +140,8 @@
 
       <div>
         <div class="media">
-  <img src="assets/galerie/gender-reveal/gr1.jpg" alt="Gâteau Gender Reveal rose et bleu" 
-       style="width:100%;height:auto;border-radius:22px;object-fit:cover;">
-</div>
+          <img src="assets/galerie/gender-reveal/gr1.jpg" alt="Gâteau Gender Reveal rose et bleu" loading="lazy">
+        </div>
         <div style="margin-top:12px">
           <span class="pill">Rose ou Bleu</span>
           <span class="pill">Chantilly Mascarpone</span>
@@ -165,20 +153,11 @@
     </section>
 
     <section class="section">
-      <h2>FAQ rapide</h2>
+      <h2>Quelques réalisations</h2>
       <div class="grid cols-3 section">
-        <div class="card">
-          <h3>Combien de parts&nbsp;?</h3>
-          <p>Nous proposons plusieurs tailles. Indiquez le nombre d’invités et nous vous conseillerons.</p>
-        </div>
-        <div class="card">
-          <h3>Délai de commande&nbsp;?</h3>
-          <p>Idéalement <strong>5–7 jours</strong> à l’avance. Pour une demande urgente, contactez-nous sur WhatsApp.</p>
-        </div>
-        <div class="card">
-          <h3>Allergies</h3>
-          <p>Merci de nous signaler toute allergie (gluten, œufs, fruits à coque, etc.) au moment de la commande.</p>
-        </div>
+        <img src="assets/galerie/gender-reveal/1.jpg" alt="Gender Reveal Cake 1" style="width:100%;border-radius:18px" loading="lazy">
+        <img src="assets/galerie/gender-reveal/2.jpg" alt="Gender Reveal Cake 2" style="width:100%;border-radius:18px" loading="lazy">
+        <img src="assets/galerie/gender-reveal/3.jpg" alt="Gender Reveal Cake 3" style="width:100%;border-radius:18px" loading="lazy">
       </div>
     </section>
 
@@ -186,17 +165,6 @@
       © Les Pâtisseries de Lida — Gâteau Gender Reveal • Fait main, sur commande
     </footer>
   </div>
-
-
-
-  <section class="section">
-  <h2>Quelques réalisations</h2>
-  <div class="grid cols-3">
-    <img src="images/gender-reveal/1.jpg" alt="Gender Reveal Cake 1" style="width:100%;border-radius:18px;">
-    <img src="images/gender-reveal/2.jpg" alt="Gender Reveal Cake 2" style="width:100%;border-radius:18px;">
-    <img src="images/gender-reveal/3.jpg" alt="Gender Reveal Cake 3" style="width:100%;border-radius:18px;">
-  </div>
-  </section>
 
   <!-- Simple JSON-LD Product snippet -->
   <script type="application/ld+json">
