@@ -11,115 +11,58 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
-  
 </head>
-<!-- 🔹 دکمه برگشت به بالا -->
-<button id="scrollTopBtn" title="Haut de page">↑</button>
 
-<style>
-#scrollTopBtn {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 99;
-  background: var(--accent);
-  color: var(--navy);
-  border: none;
-  outline: none;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  font-size: 22px;
-  cursor: pointer;
-  box-shadow: 0 0 12px rgba(214,166,58,.45);
-  transition: all .3s ease;
-  display: none; /* پنهان تا زمانی که صفحه اسکرول بشه */
-}
-
-#scrollTopBtn:hover {
-  background: var(--hover);
-  color: var(--white);
-  box-shadow: 0 0 20px rgba(214,166,58,.7);
-}
-</style>
-
-<script>
-const scrollBtn = document.getElementById("scrollTopBtn");
-
-window.addEventListener("scroll", () => {
-  if (document.documentElement.scrollTop > 300) {
-    scrollBtn.style.display = "block";
-  } else {
-    scrollBtn.style.display = "none";
-  }
-});
-
-scrollBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-</script>
-  
 <body>
   <!-- Hero / Header -->
   <header class="hero">
     <img class="logo" src="assets/mainlogo.png" alt="Logo Les Pâtisseries de Lida">
     <h1>Les Pâtisseries de Lida</h1>
-  
-    <!-- قرصی سفید براق -->
 
-   <nav class="nav-buttons">
-  <a href="#galerie" class="btn">Galerie</a>
-  <a href="#contact" class="btn">Contact</a>
-  <a href="#creations" class="btn">Créations</a>
-  <a href="# salé" class="btn">Salé</a>
-  <a href="# verrines" class="btn">Verrines</a> 
-  <a class="btn btn--pill btn--white" href="#">Commander</a>    
+    <nav class="nav-buttons">
+      <a href="#creations" class="btn">Créations</a>
+      <a href="#sale" class="btn">Salé</a>
+      <a href="#galerie" class="btn">Galerie</a>
+      <a href="#contact" class="btn">Contact</a>
+      <a class="btn btn--pill btn--white" href="#">Commander</a>    
     </nav>
-
   </header>
 
-  
   <main>
     <!-- Sucré -->
+    <section id="creations" class="section">
+      <p class="subtitle">
+        Nous sommes fiers de vous présenter notre exquise collection de gâteaux,
+        qui vous mettront l’eau à la bouche et vous donneront envie d’en redemander.
+        Des grands classiques aux créations les plus innovantes, chaque bouchée
+        vous transportera dans un univers de pur délice.
+      </p>
 
-<section id="creations" class="section">
-  
-  <!-- تیتر توضیحی -->
-  <p class="subtitle">
-    Nous sommes fiers de vous présenter notre exquise collection de gâteaux,
-    qui vous mettront l’eau à la bouche et vous donneront envie d’en redemander.
-    Des grands classiques aux créations les plus innovantes, chaque bouchée
-    vous transportera dans un univers de pur délice.
-  </p>
+      <h2 class="handwritten">Les créations de Lida</h2>
+      <h2 class="section-title">Nos créations sucrées</h2>
 
-  <!-- تیترهای بخش -->
-  <h2 class="handwritten">Les créations de Lida</h2>
-  <h2 class="section-title">Nos créations sucrées</h2>
+      <p>
+        Gâteaux d’exception, pièces montées élégantes et desserts raffinés — entièrement personnalisés selon vos envies,
+        thèmes et nombre de parts.
+      </p>
 
-  <p>
-    Gâteaux d’exception, pièces montées élégantes et desserts raffinés — entièrement personnalisés selon vos envies,
-    thèmes et nombre de parts.
-  </p>
+      <ul class="cards">
+        <li>
+          <h3 class="handwritten">Gâteaux sur mesure</h3>
+          <p>Anniversaires, baby shower, corporate… Thèmes, formes et textures modernes.</p>
+        </li>
+        <li>
+          <h3>Pièces montées</h3>
+          <p>Architecture élégante pour mariages et grandes réceptions.</p>
+        </li>
+        <li>
+          <h3>Desserts raffinés</h3>
+          <p>Entremets, cupcakes, biscuits décorés et autres douceurs.</p>
+        </li>
+      </ul>
+    </section>
 
-  <!-- کارت‌ها -->
-  <ul class="cards">
-    <li>
-      <h3 class="handwritten">Gâteaux sur mesure</h3>
-      <p>Anniversaires, baby shower, corporate… Thèmes, formes et textures modernes.</p>
-    </li>
-    <li>
-      <h3>Pièces montées</h3>
-      <p>Architecture élégante pour mariages et grandes réceptions.</p>
-    </li>
-    <li>
-      <h3>Desserts raffinés</h3>
-      <p>Entremets, cupcakes, biscuits décorés et autres douceurs.</p>
-    </li>
-  </ul>
-
-</section>
-
-<!-- Salé -->
+    <!-- Salé -->
     <section id="sale" class="section alt">
       <h2>L’art du salé</h2>
       <p>
@@ -144,52 +87,45 @@ scrollBtn.addEventListener("click", () => {
 
     <!-- Galerie -->
     <section id="galerie" class="section">
-  <h2>Galerie</h2>
-  <p>Choisissez une catégorie pour découvrir nos créations.</p>
+      <h2>Galerie</h2>
+      <p>Choisissez une catégorie pour découvrir nos créations.</p>
 
-  <div class="gallery cards">
-   <!-- Enfants -->
-<a class="cat-card" href="galerie-enfants.html">
-  <img src="assets/galerie/anniversairesenfants/anvenft.png" alt="Gâteaux d'anniversaire pour enfants">
-  <h3>Anniversaires Enfants</h3>
-</a>
+      <div class="gallery cards">
+        <a class="cat-card" href="galerie-enfants.html">
+          <img src="assets/galerie/anniversairesenfants/anvenft.png" alt="Gâteaux d'anniversaire pour enfants">
+          <h3>Anniversaires Enfants</h3>
+        </a>
 
-<!-- Mariage -->
-  <a class="cat-card" href="assets/galerie/mariage/mariage.html">
-  <img src="assets/galerie/mariage/1-1.png" alt="Gâteaux de mariage">
-  <h3>Mariage</h3>
-    </a>
+        <a class="cat-card" href="assets/galerie/mariage/mariage.html">
+          <img src="assets/galerie/mariage/1-1.png" alt="Gâteaux de mariage">
+          <h3>Mariage</h3>
+        </a>
 
-<!-- Number Cake -->
-<a class="cat-card" href="assets/galerie/numbercakes/numbercakes.html">
-  <img src="assets/galerie/numbercakes/numbercake.png" alt="Number cakes">
-  <h3>Number Cake</h3>
-</a>
+        <a class="cat-card" href="assets/galerie/numbercakes/numbercakes.html">
+          <img src="assets/galerie/numbercakes/numbercake.png" alt="Number cakes">
+          <h3>Number Cake</h3>
+        </a>
 
-<!-- Bento Cake -->
-<a class="cat-card" href="galerie-bento.html">
-  <img src="assets/galerie/bento/bento.png" alt="Bento cakes">
-  <h3>Bento Cake</h3>
-</a>
+        <a class="cat-card" href="galerie-bento.html">
+          <img src="assets/galerie/bento/bento.png" alt="Bento cakes">
+          <h3>Bento Cake</h3>
+        </a>
 
-<!-- Biscuits personnalisés -->
-<a class="cat-card" href="galerie-biscuits.html">
-  <img src="assets/galerie/biscuitperso/sable.png" alt="Biscuits personnalisés">
-  <h3>Biscuits personnalisés</h3>
-</a>
+        <a class="cat-card" href="galerie-biscuits.html">
+          <img src="assets/galerie/biscuitperso/sable.png" alt="Biscuits personnalisés">
+          <h3>Biscuits personnalisés</h3>
+        </a>
 
-<!-- Gender reveal-->
-<a class="cat-card" href="assets/galerie/gender-reveal/gender-reveal.html">
-  <img src="assets/galerie/gender-reveal/gender1.png" alt="Gender-reveal">
-  <h3>Gender Reveal</h3>
-</a>
+        <a class="cat-card" href="assets/galerie/gender-reveal/gender-reveal.html">
+          <img src="assets/galerie/gender-reveal/gender1.png" alt="Gender-reveal">
+          <h3>Gender Reveal</h3>
+        </a>
 
-    <!-- Cupcakes -->
-<a class="cat-card" href="assets/galerie/cupcakes/cupcakes.html">
-  <img src="assets/galerie/cupcakes/cupcakes.png" alt="Cupcakes personnalisés au thème">
-  <h3>Cupcakes</h3>
-</a>
-  </div>
+        <a class="cat-card" href="assets/galerie/cupcakes/cupcakes.html">
+          <img src="assets/galerie/cupcakes/cupcakes.png" alt="Cupcakes personnalisés au thème">
+          <h3>Cupcakes</h3>
+        </a>
+      </div>
     </section>
 
     <!-- Contact -->
@@ -206,8 +142,23 @@ scrollBtn.addEventListener("click", () => {
     <p>© <span id="year"></span> Les Pâtisseries de Lida — Tous droits réservés</p>
   </footer>
 
+  <!-- دکمه برگشت به بالا -->
+  <button id="scrollTopBtn" title="Haut de page" aria-label="Revenir en haut">↑</button>
+
   <script>
+    // سال فوتر
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // اسکرول به بالا
+    document.addEventListener('DOMContentLoaded', function () {
+      const scrollBtn = document.getElementById("scrollTopBtn");
+      window.addEventListener("scroll", () => {
+        scrollBtn.style.display = document.documentElement.scrollTop > 300 ? "block" : "none";
+      });
+      scrollBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    });
   </script>
 </body>
 </html>
