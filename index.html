@@ -13,6 +13,52 @@
   <link rel="stylesheet" href="style.css" />
   
 </head>
+<!-- 🔹 دکمه برگشت به بالا -->
+<button id="scrollTopBtn" title="Haut de page">↑</button>
+
+<style>
+#scrollTopBtn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 99;
+  background: var(--accent);
+  color: var(--navy);
+  border: none;
+  outline: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(214,166,58,.45);
+  transition: all .3s ease;
+  display: none; /* پنهان تا زمانی که صفحه اسکرول بشه */
+}
+
+#scrollTopBtn:hover {
+  background: var(--hover);
+  color: var(--white);
+  box-shadow: 0 0 20px rgba(214,166,58,.7);
+}
+</style>
+
+<script>
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (document.documentElement.scrollTop > 300) {
+    scrollBtn.style.display = "block";
+  } else {
+    scrollBtn.style.display = "none";
+  }
+});
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+</script>
+  
 <body>
   <!-- Hero / Header -->
   <header class="hero">
