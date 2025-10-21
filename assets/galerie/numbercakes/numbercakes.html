@@ -2,170 +2,123 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Les Number Cakes — Les Pâtisseries de Lida</title>
-  <meta name="description" content="Les Number Cakes par Les Pâtisseries de Lida — informations, personnalisation, tailles et tarifs.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Number Cakes — Les Pâtisseries de Lida</title>
+  <meta name="description" content="Number Cakes personnalisés : formes chiffres/lettres, cœur, cercle. Tailles, tarifs, personnalisation et galerie.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --navy: #1a2238;
-      --pink: #f8e9ec;
-      --coffee: #d2bba0;
-      --cream: #fdf6ed;
-      --black: #0e0e0e;
-      --accent: #caa24d;
-      --hover: #b68b2e;
-      --white: #ffffff;
+    :root{
+      --navy:#1a2238;         /* آبی نفتی هدر */
+      --cream:#fdf6ed;        /* پس‌زمینهٔ کرم */
+      --ink:#0e0e0e;          /* رنگ متن اصلی */
+      --accent:#caa24d;       /* طلایی برند */
+      --hover:#b68b2e;        /* هاور طلایی تیره‌تر */
+      --card:#ffffff;         /* کارت سفید */
+      --border:rgba(0,0,0,.08);
     }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--cream);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.7}
+    a{text-decoration:none;color:var(--accent);transition:.25s}
+    a:hover{color:var(--hover)}
+    .wrap{max-width:980px;margin:0 auto;padding:24px}
 
-    * { box-sizing: border-box; }
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: var(--cream);
-      color: var(--black);
-      font-family: 'Inter', system-ui, sans-serif;
-      line-height: 1.7;
+    /* Header navy با لوگو و عنوان دست‌نویس */
+    header.hero{
+      background:var(--navy); color:#fff; text-align:center;
+      padding:32px 16px 28px; border-bottom:4px solid var(--accent);
+      border-radius:14px 14px 0 0;
     }
+    .logo{width:170px; height:auto; display:block; margin:0 auto 12px; border-radius:10px}
+    .brand{font-family:'Great Vibes',cursive; font-size:40px; margin:6px 0 2px}
+    .badge{display:inline-block; padding:6px 14px; border-radius:999px; background:var(--accent); color:var(--navy); font-weight:700; font-size:14px}
 
-    .wrap {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 24px;
+    main.card{
+      background:var(--card); border:1px solid var(--border);
+      border-radius:0 0 16px 16px; padding:28px;
+      box-shadow:0 6px 16px rgba(0,0,0,.06);
     }
+    h2{font-family:'Playfair Display',serif; color:var(--navy); text-align:center; margin:22px 0 10px}
+    p.lead{font-size:18px; text-align:center; color:#1d1d1d; margin:8px auto 18px; max-width:760px}
+    p, ul{max-width:760px; margin:10px auto; font-size:17px}
+    ul{padding-left:20px}
 
-    header {
-      background: var(--navy);
-      color: #fff;
-      text-align: center;
-      padding: 30px 16px;
-      border-bottom: 4px solid var(--accent);
-      border-radius: 12px 12px 0 0;
+    /* گالری واکنش‌گرا */
+    .gallery{display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); margin-top:16px}
+    .gallery img{width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:14px; border:1px solid var(--border); background:#fffaf6; box-shadow:0 1px 2px rgba(0,0,0,.03)}
+
+    /* دکمه‌های قرصی */
+    .cta{display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin:24px 0 8px}
+    .btn{
+      display:inline-block; white-space:nowrap; padding:10px 22px; border-radius:999px;
+      background:linear-gradient(#fff7dc,var(--accent));
+      border:2px solid var(--accent); color:var(--navy);
+      font-family:'Great Vibes',cursive; font-size:22px; letter-spacing:.2px;
+      box-shadow:0 0 14px rgba(214,166,58,.45); transition:all .25s ease;
     }
+    .btn:hover{transform:translateY(-2px); box-shadow:0 0 24px rgba(214,166,58,.7)}
 
-    .logo {
-      width: 160px;
-      display: block;
-      margin: 0 auto 12px;
-      border-radius: 8px;
-    }
+    footer{ text-align:center; color:var(--navy); font-size:14px; margin-top:26px; padding-top:18px; border-top:1px solid var(--border) }
 
-    h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 38px;
-      margin: 8px 0;
-      color: var(--white);
-    }
-
-    .badge {
-      background: var(--accent);
-      color: var(--navy);
-      display: inline-block;
-      padding: 6px 14px;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 14px;
-      margin-top: 8px;
-    }
-
-    main.card {
-      background: var(--white);
-      border: 1px solid rgba(0,0,0,.08);
-      border-radius: 0 0 16px 16px;
-      padding: 32px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
-      margin-top: -4px;
-    }
-
-    h2 {
-      font-family: 'Playfair Display', serif;
-      color: var(--navy);
-      margin-top: 28px;
-      font-size: 22px;
-      text-align: center;
-    }
-
-    p.lead {
-      color: var(--black);
-      text-align: center;
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-
-    p, ul { font-size: 17px; margin: 10px auto; max-width: 760px; }
-    ul { padding-left: 20px; }
-
-    .cta {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin: 28px 0 10px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: linear-gradient(#fff7dc, var(--accent));
-      border: 2px solid var(--accent);
-      color: var(--navy);
-      border-radius: 999px;
-      padding: 10px 24px;
-      text-decoration: none;
-      font-family: 'Great Vibes', cursive;
-      font-size: 22px;
-      box-shadow: 0 0 14px rgba(214,166,58,.45);
-      transition: all .3s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 25px rgba(214,166,58,.7);
-    }
-
-    footer {
-      text-align: center;
-      color: var(--navy);
-      font-size: 14px;
-      margin-top: 32px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(0,0,0,.08);
+    /* ریسپانسیو */
+    @media (max-width:600px){
+      .brand{font-size:32px}
+      .btn{font-size:20px; padding:9px 18px}
     }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <img src="assets/galerie/numbercakes/numbercake.png" alt="Logo Les Pâtisseries de Lida" class="logo">
-      <h1>Les Pâtisseries de Lida</h1>
+    <!-- Header -->
+    <header class="hero">
+      <!-- مسیر لوگوی خودت را اینجا بگذار -->
+      <img class="logo" src="assets/mainlogo.png" alt="Logo Les Pâtisseries de Lida">
+      <div class="brand">Les Pâtisseries de Lida</div>
       <div class="badge">Number Cakes</div>
     </header>
 
+    <!-- Content -->
     <main class="card" role="main">
-      <p class="lead">Hyper tendance, nos Number Cakes se déclinent sous différentes formes : <strong>chiffres, lettres, cercle, cœur</strong>, ou toute autre forme selon vos envies.</p>
+      <p class="lead">
+        Hyper tendance, nos Number Cakes se déclinent sous différentes formes&nbsp;:
+        <strong>chiffres, lettres, cercle, cœur</strong>, ou toute autre forme selon vos envies.
+      </p>
 
       <h2>Tarifs</h2>
-      <p>À partir de <strong>5 € la part</strong> (hors personnalisation). Les décorations spécifiques et les impressions alimentaires sont proposées en supplément.</p>
+      <p>À partir de <strong>5&nbsp;€ la part</strong> (hors personnalisation). Les décorations spécifiques et les impressions alimentaires sont proposées en supplément.</p>
 
       <h2>Personnalisation</h2>
-      <p>Pour toute demande de devis, merci d’indiquer :</p>
+      <p>Pour toute demande de devis, merci d’indiquer&nbsp;:</p>
       <ul>
         <li>le <strong>thème</strong> ;</li>
         <li>le <strong>modèle</strong> (forme souhaitée) ;</li>
-        <li>le <strong>goût</strong> et la <strong>base</strong> (<em>génoise nature</em>, <em>chocolat</em> ou <em>sablée</em>) ;</li>
-        <li>la <strong>crème</strong> (<em>chantilly mascarpone</em>, <em>ganache</em>, <em>crème diplomate</em>...) ;</li>
-        <li>les <strong>suppléments</strong> gourmands : <em>speculoos</em>, <em>caramel beurre salé</em>, <em>fruits rouges</em>, etc.</li>
+        <li>le <strong>goût</strong> et la <strong>base</strong> (génoise nature, chocolat ou sablée) ;</li>
+        <li>la <strong>crème</strong> (chantilly mascarpone, ganache, crème diplomate…) ;</li>
+        <li>les <strong>suppléments</strong> gourmands : speculoos, caramel beurre salé, fruits rouges, etc.</li>
       </ul>
 
       <h2>Portions disponibles</h2>
       <p>Commandes possibles pour <strong>8</strong>, <strong>12</strong>, <strong>15 parts</strong>, et selon certaines formes, <strong>au-delà</strong>.</p>
 
+      <h2>Galerie</h2>
+      <div class="gallery">
+        <!-- مسیر عکس‌ها را به پوشهٔ خودت تغییر بده -->
+        <img src="assets/galerie/numbercakes/1.jpg" alt="Number cake chiffre 1">
+        <img src="assets/galerie/numbercakes/2.jpg" alt="Number cake chiffre 2">
+        <img src="assets/galerie/numbercakes/3.jpg" alt="Number cake cœur">
+        <img src="assets/galerie/numbercakes/4.jpg" alt="Number cake lettre">
+        <img src="assets/galerie/numbercakes/5.jpg" alt="Number cake cercle">
+      </div>
+
       <div class="cta">
-        <a class="btn" href="#">Demander un devis</a>
-        <a class="btn" href="#">Voir la galerie</a>
+        <a class="btn" href="mailto:contact@lespatisseriesdelida.fr">Demander un devis</a>
+        <a class="btn" href="/galerie.html">Voir la galerie</a>
       </div>
 
       <footer>
-        © Les Pâtisseries de Lida — Nord (59) & Pas-de-Calais (62)
+        © Les Pâtisseries de Lida — Nord (59) &amp; Pas-de-Calais (62)
       </footer>
     </main>
   </div>
