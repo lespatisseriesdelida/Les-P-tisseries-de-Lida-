@@ -1,185 +1,159 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gâteau Gender Reveal | Les Pâtisseries de Lida</title>
-  <meta name="description" content="Gâteau Gender Reveal : intérieur rose ou bleu, chantilly mascarpone ou buttercream, déco en pâte à sucre ou en crème. Personnalisation via WhatsApp.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gâteau Gender Reveal — Les Pâtisseries de Lida</title>
+  <meta name="description" content="Gâteau Gender Reveal : intérieur rose ou bleu, chantilly mascarpone ou buttercream, décor en crème ou pâte à sucre. Personnalisation et devis.">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&family=Great+Vibes&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg: #faf6f1;
-      --card: #fffdfb;
-      --text: #2b2b2b;
-      --muted: #6e6e6e;
-      --primary: #b27a3a; /* gold-tan */
-      --accent: #e9d7c3;
-      --ring: rgba(178,122,58,0.25);
+      --navy:#1a2238;         /* آبی نفتی */
+      --cream:#fdf6ed;        /* پس‌زمینه */
+      --ink:#0e0e0e;          /* متن اصلی */
+      --accent:#caa24d;       /* طلایی برند */
+      --hover:#b68b2e;        /* هاور طلایی تیره‌تر */
+      --card:#ffffff;         /* کارت سفید */
+      --border:rgba(0,0,0,.08);
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1080px;margin-inline:auto;padding:24px}
-    .hero{
-      position:relative;
-      border-radius:28px;
-      padding:48px 24px;
-      background:radial-gradient(1200px 500px at 10% -20%, #fff 0, var(--bg) 60%), linear-gradient(180deg,#fff 0%,var(--bg) 100%);
-      overflow:hidden;
-      box-shadow:0 12px 30px rgba(0,0,0,.05);
-      margin-bottom: 28px;
+    html,body{margin:0;padding:0;background:var(--cream);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.7}
+    a{text-decoration:none;color:var(--accent);transition:.25s}
+    a:hover{color:var(--hover)}
+    .wrap{max-width:980px;margin:0 auto;padding:24px}
+
+    /* هدر آبی نفتی با لوگو و برند */
+    header.hero{
+      background:var(--navy); color:#fff; text-align:center;
+      padding:32px 16px 28px; border-bottom:4px solid var(--accent);
+      border-radius:14px 14px 0 0;
     }
-    .badge{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--accent);color:var(--primary);padding:6px 12px;border-radius:999px;font-weight:600;font-size:12px}
-    h1{font-family:"Playfair Display",serif;font-weight:700;font-size:clamp(32px,5vw,48px);margin:14px 0 8px}
-    .lead{font-size:clamp(15px,2.2vw,18px);color:var(--muted);max-width:62ch}
-    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
-    .btn{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:12px 18px;border-radius:14px;font-weight:600;
-      border:1px solid var(--primary);color:#fff;background:var(--primary);
-      box-shadow:0 6px 18px var(--ring);
-      transition:transform .12s ease, box-shadow .12s ease, background .2s;
+    .logo{width:170px; height:auto; display:block; margin:0 auto 12px; border-radius:10px}
+    .brand{font-family:'Great Vibes',cursive; font-size:40px; margin:6px 0 2px}
+    .badge{display:inline-block; padding:6px 14px; border-radius:999px; background:var(--accent); color:var(--navy); font-weight:700; font-size:14px}
+
+    /* کارت بدنه */
+    main.card{
+      background:var(--card); border:1px solid var(--border);
+      border-radius:0 0 16px 16px; padding:28px;
+      box-shadow:0 6px 16px rgba(0,0,0,.06);
     }
-    .btn:hover{transform:translateY(-1px);box-shadow:0 10px 22px var(--ring)}
-    .btn.outline{background:#fff;color:var(--primary)}
-    .grid{display:grid;gap:18px}
-    @media (min-width: 900px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
-    .card{
-      background:var(--card);
-      border:1px solid #efe7df;
-      border-radius:22px;
-      padding:20px;
-      box-shadow:0 6px 16px rgba(0,0,0,0.04);
-    }
-    .card h3{margin:8px 0 6px;font-size:20px}
-    .list{padding-left:18px;margin:0}
-    .list li{margin:.25rem 0}
-    .media{
-      border-radius:22px;
-      aspect-ratio: 16/9;
-      background:linear-gradient(180deg,#fff,#f5efe7);
-      border:1px dashed #ead9c8;
-      display:flex;align-items:center;justify-content:center;
-      color:#a78b6c;
-      font-weight:500;
-      overflow: hidden;
-    }
-    .media img{width:100%;height:100%;object-fit:cover;display:block}
-    .section{margin-top:32px}
-    .split{display:grid;gap:22px}
-    @media (min-width: 900px){.split{grid-template-columns:1.1fr .9fr;align-items:center}}
+    h2{font-family:'Playfair Display',serif; color:var(--navy); text-align:center; margin:22px 0 10px}
+    p.lead{font-size:18px; text-align:center; color:#1d1d1d; margin:8px auto 18px; max-width:760px}
+    p, ul{max-width:760px; margin:10px auto; font-size:17px}
+    ul{padding-left:20px}
+
+    /* بخش دو ستونه (توضیحات + تصویر) */
+    .split{display:grid; gap:22px; margin-top:8px}
+    @media(min-width:900px){ .split{grid-template-columns:1.1fr .9fr; align-items:center} }
+
     .note{
-      font-size:14px;color:var(--muted);
-      background:#fff;border:1px dashed #ead9c8;border-radius:16px;
-      padding:12px 14px
+      font-size:14px; color:#555; background:#fff;
+      border:1px dashed #ead9c8; border-radius:14px; padding:12px 14px;
+      max-width:760px; margin:10px auto;
     }
-    footer{
-      margin:40px 0 10px;color:var(--muted);font-size:13px;text-align:center
+
+    /* گالری/مدیا */
+    .media{border-radius:16px; overflow:hidden; border:1px solid var(--border); background:#fffaf6}
+    .media img{width:100%; height:auto; display:block; object-fit:cover}
+    .gallery{display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); margin-top:16px}
+    .gallery img{width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:14px; border:1px solid var(--border); background:#fff; box-shadow:0 1px 2px rgba(0,0,0,.03)}
+
+    /* دکمه‌ها */
+    .cta{display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin:22px 0 8px}
+    .btn{
+      display:inline-block; white-space:nowrap; padding:10px 22px; border-radius:999px;
+      background:linear-gradient(#fff7dc,var(--accent));
+      border:2px solid var(--accent); color:var(--navy);
+      font-family:'Great Vibes',cursive; font-size:22px; letter-spacing:.2px;
+      box-shadow:0 0 14px rgba(214,166,58,.45); transition:all .25s ease;
     }
-    .pill{display:inline-flex;padding:6px 10px;border-radius:999px;background:#fff;border:1px solid #efeadf;font-size:12px;color:#7a6a55;margin-right:8px;margin-bottom:8px}
-    .title-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .btn:hover{transform:translateY(-2px); box-shadow:0 0 24px rgba(214,166,58,.7)}
+
+    footer{ text-align:center; color:var(--navy); font-size:14px; margin-top:26px; padding-top:18px; border-top:1px solid var(--border) }
+
+    /* ریسپانسیو */
+    @media (max-width:600px){
+      .brand{font-size:32px}
+      .btn{font-size:20px; padding:9px 18px}
+    }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="wrap">
+    <!-- Header -->
     <header class="hero">
-      <img class="logo" src="assets/galerie/mainlogo.png" alt="Logo Les Pâtisseries de Lida" loading="lazy" style="width:120px;height:auto;display:block;margin-bottom:10px">
-      <span class="badge">🎉 Gâteau Gender Reveal</span>
-      <h1>Une révélation pleine d’émotion</h1>
+      <!-- مسیر لوگو را به فایل خودت تغییر بده -->
+      <img class="logo" src="assets/mainlogo.png" alt="Logo Les Pâtisseries de Lida">
+      <div class="brand">Les Pâtisseries de Lida</div>
+      <div class="badge">Gâteau Gender Reveal</div>
+    </header>
+
+    <!-- Content -->
+    <main class="card" role="main">
+
       <p class="lead">
         Faites de l’annonce du sexe de votre bébé un moment inoubliable. À la découpe, l’intérieur du gâteau dévoile la grande surprise&nbsp;: <strong>rose ou bleu</strong>.
       </p>
-      <div class="cta">
-        <a class="btn" href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener">Commander via WhatsApp</a>
-        <a class="btn outline" href="#details">Voir les détails</a>
-      </div>
-    </header>
 
-    <section id="details" class="section split">
-      <div>
-        <div class="title-row"><h2>Personnalisez votre gâteau</h2></div>
-        <div class="grid cols-3 section">
-          <div class="card">
-            <h3>Intérieur &amp; couleurs</h3>
-            <ul class="list">
-              <li>Intérieur révélant <strong>rose</strong> ou <strong>bleu</strong>.</li>
-              <li>Saveurs au choix (vanille, chocolat, etc.).</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Crèmes au choix</h3>
-            <ul class="list">
-              <li><strong>Chantilly mascarpone</strong> légère et onctueuse.</li>
-              <li><strong>Buttercream</strong> pour une tenue parfaite.</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Décorations</h3>
-            <ul class="list">
-              <li><strong>Pâte à sucre</strong> (finitions nettes, motifs précis).</li>
-              <li><strong>Décor crème</strong> (piping, textures naturelles).</li>
-            </ul>
-          </div>
-        </div>
+      <!-- بخش دو ستونه -->
+      <section class="split">
+        <div>
+          <h2>Personnalisation</h2>
+          <ul>
+            <li><strong>Intérieur</strong>&nbsp;: révélant <strong>rose</strong> ou <strong>bleu</strong>.</li>
+            <li><strong>Crèmes</strong>&nbsp;: chantilly mascarpone légère, ou buttercream pour une tenue parfaite.</li>
+            <li><strong>Décors</strong>&nbsp;: en crème (textures naturelles) ou pâte à sucre (finitions nettes).</li>
+            <li><strong>Saveurs</strong>&nbsp;: vanille, chocolat, etc.</li>
+          </ul>
 
-        <div class="section">
-          <h3>Comment commander&nbsp;?</h3>
-          <p>Envoyez-nous la <strong>photo du modèle</strong> souhaité via WhatsApp, ou laissez-nous carte blanche pour un <strong>véritable effet surprise</strong> ✨</p>
-          <p class="note">Nous respectons vos préférences de couleurs, le thème de l’événement et le nombre de parts. Chaque gâteau est réalisé sur commande.</p>
+          <h2>Comment commander ?</h2>
+          <p>Envoyez la <strong>photo du modèle</strong> souhaité via WhatsApp, ou laissez-nous carte blanche pour un <strong>effet surprise</strong> ✨</p>
+          <p class="note">Nous respectons vos couleurs, le thème de l’événement et le nombre de parts. Chaque gâteau est réalisé sur commande.</p>
+
           <div class="cta">
-            <a class="btn" href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener">Je veux ce gâteau</a>
-            <a class="btn outline" href="mailto:contact@lespatisseriesdelida.fr">Demander un devis</a>
+            <a class="btn" href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener">Commander via WhatsApp</a>
+            <a class="btn" href="mailto:contact@lespatisseriesdelida.fr">Demander un devis</a>
           </div>
         </div>
-      </div>
 
-      <div>
-        <div class="media">
-          <img src="assets/galerie/gender-reveal/gender1.png" alt="Gâteau Gender Reveal rose et bleu" loading="lazy">
-        </div>
-        <div style="margin-top:12px">
-          <span class="pill">Rose ou Bleu</span>
-          <span class="pill">Chantilly Mascarpone</span>
-          <span class="pill">Buttercream</span>
-          <span class="pill">Pâte à Sucre</span>
-          <span class="pill">Décor en Crème</span>
-        </div>
-      </div>
-    </section>
+        <div>
+          <!-- تصویر نمونهٔ اصلی -->
+          <div class="media">
+            <!-- مسیر را با عکس خودت عوض کن -->
+            <img src="assets/galerie/gender-reveal/gr1.jpg" alt="Gâteau Gender Reveal rose et bleu">
+          </div>
 
-    <section class="section">
+          <!-- کلمات کلیدی کوچک (اختیاری) -->
+          <div class="cta" style="margin-top:12px">
+            <span class="badge" style="background:#fff;color:var(--navy);border:1px solid var(--border)">Rose ou Bleu</span>
+            <span class="badge" style="background:#fff;color:var(--navy);border:1px solid var(--border)">Chantilly Mascarpone</span>
+            <span class="badge" style="background:#fff;color:var(--navy);border:1px solid var(--border)">Buttercream</span>
+          </div>
+        </div>
+      </section>
+
       <h2>Quelques réalisations</h2>
-      <div class="grid cols-3 section">
-        <img src="assets/galerie/gender-reveal/1.jpg" alt="Gender Reveal Cake 1" style="width:100%;border-radius:18px" loading="lazy">
-        <img src="assets/galerie/gender-reveal/2.jpg" alt="Gender Reveal Cake 2" style="width:100%;border-radius:18px" loading="lazy">
-        <img src="assets/galerie/gender-reveal/3.jpg" alt="Gender Reveal Cake 3" style="width:100%;border-radius:18px" loading="lazy">
+      <div class="gallery">
+        <!-- مسیرها را با گالری خودت هماهنگ کن -->
+        <img src="assets/galerie/gender-reveal/1.jpg" alt="Gender Reveal Cake 1">
+        <img src="assets/galerie/gender-reveal/2.jpg" alt="Gender Reveal Cake 2">
+        <img src="assets/galerie/gender-reveal/3.jpg" alt="Gender Reveal Cake 3">
       </div>
-    </section>
 
-    <footer>
-      © Les Pâtisseries de Lida — Gâteau Gender Reveal • Fait main, sur commande
-    </footer>
+      <div class="cta">
+        <a class="btn" href="#top">Retour en haut</a>
+      </div>
+
+      <footer>
+        © Les Pâtisseries de Lida — Gâteau Gender Reveal • Fait main, sur commande
+      </footer>
+    </main>
   </div>
-
-  <!-- Simple JSON-LD Product snippet -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Gâteau Gender Reveal",
-    "brand": {"@type": "Brand", "name": "Les Pâtisseries de Lida"},
-    "description": "Gâteau Gender Reveal : intérieur rose ou bleu, chantilly mascarpone ou buttercream, déco en pâte à sucre ou en crème.",
-    "offers": {
-      "@type": "Offer",
-      "availability": "https://schema.org/InStock",
-      "priceCurrency": "EUR"
-    }
-  }
-  </script>
 </body>
 </html>
