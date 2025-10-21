@@ -30,12 +30,31 @@
     /* هدر آبی نفتی با لوگو و برند */
     header.hero{
       background:var(--navy); color:#fff; text-align:center;
-      padding:32px 16px 28px; border-bottom:4px solid var(--accent);
+      padding:32px 16px 18px; border-bottom:4px solid var(--accent);
       border-radius:14px 14px 0 0;
     }
     .logo{width:170px; height:auto; display:block; margin:0 auto 12px; border-radius:10px}
     .brand{font-family:'Great Vibes',cursive; font-size:40px; margin:6px 0 2px}
     .badge{display:inline-block; padding:6px 14px; border-radius:999px; background:var(--accent); color:var(--navy); font-weight:700; font-size:14px}
+
+    /* ناوبری قرصی زیر هدر */
+    .nav-buttons{
+      display:flex; justify-content:center; align-items:center;
+      flex-wrap:wrap; gap:10px; margin:14px auto 0; padding:0 8px; max-width:100%;
+    }
+    .nav-buttons .btn{
+      background:linear-gradient(#ffffff, #f7f3e6);
+      border:2px solid var(--accent); color:#000;
+      border-radius:999px; padding:.55rem 1.2rem;
+      box-shadow:0 0 12px rgba(214,166,58,.35);
+      font-family:'Great Vibes',cursive; font-size:20px;
+      transition:all .25s ease;
+    }
+    .nav-buttons .btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 0 22px rgba(214,166,58,.55), inset 0 3px 6px rgba(255,255,255,.6);
+      color:var(--navy);
+    }
 
     /* کارت بدنه */
     main.card{
@@ -64,7 +83,7 @@
     .gallery{display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); margin-top:16px}
     .gallery img{width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:14px; border:1px solid var(--border); background:#fff; box-shadow:0 1px 2px rgba(0,0,0,.03)}
 
-    /* دکمه‌ها */
+    /* دکمه‌های عمومی (CTAها) */
     .cta{display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin:22px 0 8px}
     .btn{
       display:inline-block; white-space:nowrap; padding:10px 22px; border-radius:999px;
@@ -81,6 +100,7 @@
     @media (max-width:600px){
       .brand{font-size:32px}
       .btn{font-size:20px; padding:9px 18px}
+      .nav-buttons .btn{font-size:19px; padding:.45rem 1rem}
     }
   </style>
 </head>
@@ -89,9 +109,21 @@
     <!-- Header -->
     <header class="hero">
       <!-- مسیر لوگو را به فایل خودت تغییر بده -->
-      <img class="logo" src="assets/galerie/mainlogo.png" alt="Logo Les Pâtisseries de Lida">
+      <img class="logo" src="../../../assets/mainlogo.png" alt="Logo Les Pâtisseries de Lida">
       <div class="brand">Les Pâtisseries de Lida</div>
       <div class="badge">Gâteau Gender Reveal</div>
+
+      <!-- ناوبری قرصی -->
+      <nav class="nav-buttons" aria-label="Navigation principale">
+        <a class="btn" href="index.html">Accueil</a>
+        <a class="btn" href="numbercakes.html">Number Cakes</a>
+        <a class="btn" href="cupcakes.html">Cupcakes</a>
+        <a class="btn" href="bento.html">Bento Cakes</a>
+        <a class="btn" href="biscuits.html">Biscuits personnalisés</a>
+        <a class="btn" href="enfants.html">Gâteaux d'enfants</a>
+        <a class="btn" href="gallery.html">Galerie</a>
+        <a class="btn" href="contact.html">Contact</a>
+      </nav>
     </header>
 
     <!-- Content -->
@@ -126,7 +158,7 @@
           <!-- تصویر نمونهٔ اصلی -->
           <div class="media">
             <!-- مسیر را با عکس خودت عوض کن -->
-            <img src="assets/galerie/gender-reveal/gr1.jpg" alt="Gâteau Gender Reveal rose et bleu">
+            <img src="assets/galerie/gender-reveal/gr1.jpg" alt="Gâteau Gender Reveal rose et bleu" loading="lazy">
           </div>
 
           <!-- کلمات کلیدی کوچک (اختیاری) -->
@@ -141,9 +173,9 @@
       <h2>Quelques réalisations</h2>
       <div class="gallery">
         <!-- مسیرها را با گالری خودت هماهنگ کن -->
-        <img src="assets/galerie/gender-reveal/gr1.jpg" alt="Gender Reveal Cake 1">
-        <img src="assets/galerie/gender-reveal/2.jpg" alt="Gender Reveal Cake 2">
-        <img src="assets/galerie/gender-reveal/3.jpg" alt="Gender Reveal Cake 3">
+        <img src="assets/galerie/gender-reveal/1.jpg" alt="Gender Reveal Cake 1" loading="lazy">
+        <img src="assets/galerie/gender-reveal/2.jpg" alt="Gender Reveal Cake 2" loading="lazy">
+        <img src="assets/galerie/gender-reveal/3.jpg" alt="Gender Reveal Cake 3" loading="lazy">
       </div>
 
       <div class="cta">
