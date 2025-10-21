@@ -268,3 +268,9 @@ ul.cards li { list-style: none; margin: 0 0 16px; padding: 20px 16px; }
 @media (max-width: 420px) {
   .scroll-top { right: 16px; bottom: 20px; }
 }
+
+.wrap{
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
