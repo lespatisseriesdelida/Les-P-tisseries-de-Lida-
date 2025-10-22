@@ -9,23 +9,30 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&family=Great+Vibes&display=swap" rel="stylesheet">
+
   <style>
     :root{
-      --navy:#1a2238;         /* آبی نفتی هدر */
-      --cream:#fdf6ed;        /* پس‌زمینهٔ کرم */
-      --ink:#0e0e0e;          /* رنگ متن اصلی */
-      --accent:#caa24d;       /* طلایی برند */
-      --hover:#b68b2e;        /* هاور طلایی تیره‌تر */
-      --card:#ffffff;         /* کارت سفید */
+      --navy:#1a2238;         
+      --cream:#fdf6ed;        
+      --ink:#0e0e0e;          
+      --accent:#caa24d;       
+      --hover:#b68b2e;        
+      --card:#ffffff;         
       --border:rgba(0,0,0,.08);
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--cream);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.7}
+    html,body{
+      margin:0;padding:0;
+      background:var(--cream);
+      color:var(--ink);
+      font-family:Inter,system-ui,sans-serif;
+      line-height:1.7;
+    }
     a{text-decoration:none;color:var(--accent);transition:.25s}
     a:hover{color:var(--hover)}
     .wrap{max-width:95%; margin:0 auto;padding:20px 10px;}
 
-    /* Header navy با لوگو و عنوان دست‌نویس */
+    /* Header navy */
     header.hero{
       background:var(--navy); color:#fff; text-align:center;
       padding:32px 16px 28px; border-bottom:4px solid var(--accent);
@@ -35,6 +42,7 @@
     .brand{font-family:'Great Vibes',cursive; font-size:40px; margin:6px 0 2px}
     .badge{display:inline-block; padding:6px 14px; border-radius:999px; background:var(--accent); color:var(--navy); font-weight:700; font-size:14px}
 
+    /* کارت اصلی */
     main.card{
       background:var(--card); border:1px solid var(--border);
       border-radius:0 0 16px 16px; padding:28px;
@@ -45,11 +53,41 @@
     p, ul{max-width:760px; margin:10px auto; font-size:17px}
     ul{padding-left:20px}
 
-    /* گالری واکنش‌گرا */
-    .gallery{display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); margin-top:16px}
-    .gallery img{width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:14px; border:1px solid var(--border); background:#fffaf6; box-shadow:0 1px 2px rgba(0,0,0,.03)}
+    /* ✅ تصویر اصلی - اضافه شده */
+    .media{
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid var(--border);
+      background:#fffaf6;
+      max-width:480px;       /* حداکثر عرض تصویر */
+      margin:0 auto;         /* وسط‌چین */
+      box-shadow:0 3px 8px rgba(0,0,0,.05);
+    }
+    .media img{
+      width:100%;
+      height:auto;
+      display:block;
+      object-fit:cover;
+    }
 
-    /* دکمه‌های قرصی */
+    /* گالری واکنش‌گرا */
+    .gallery{
+      display:grid;
+      gap:16px;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      margin-top:16px
+    }
+    .gallery img{
+      width:100%;
+      aspect-ratio:1/1;
+      object-fit:cover;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:#fffaf6;
+      box-shadow:0 1px 2px rgba(0,0,0,.03);
+    }
+
+    /* دکمه‌ها */
     .cta{display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin:24px 0 8px}
     .btn{
       display:inline-block; white-space:nowrap; padding:10px 22px; border-radius:999px;
@@ -60,7 +98,14 @@
     }
     .btn:hover{transform:translateY(-2px); box-shadow:0 0 24px rgba(214,166,58,.7)}
 
-    footer{ text-align:center; color:var(--navy); font-size:14px; margin-top:26px; padding-top:18px; border-top:1px solid var(--border) }
+    footer{
+      text-align:center;
+      color:var(--navy);
+      font-size:14px;
+      margin-top:26px;
+      padding-top:18px;
+      border-top:1px solid var(--border);
+    }
 
     /* ریسپانسیو */
     @media (max-width:600px){
@@ -68,85 +113,77 @@
       .btn{font-size:20px; padding:9px 18px}
     }
 
-    /* بخش دو ستونه (توضیحات + تصویر) */
+    /* بخش دو ستونه */
     .split{display:grid; gap:22px; margin-top:8px}
-    @media(min-width:900px){ .split{grid-template-columns:1.1fr .9fr; align-items:center} }
+    @media(min-width:900px){
+      .split{grid-template-columns:1.1fr .9fr; align-items:center}
+    }
 
     .note{
       font-size:14px; color:#555; background:#fff;
       border:1px dashed #ead9c8; border-radius:14px; padding:12px 14px;
       max-width:760px; margin:10px auto;
     }
-    
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <!-- Header -->
     <header class="hero">
-      <!-- مسیر لوگوی خودت را اینجا بگذار -->
       <img class="logo" src="../../../assets/mainlogo.png" alt="Logo Les Pâtisseries de Lida">
       <div class="brand">Les Pâtisseries de Lida</div>
-      
 
       <nav class="nav-buttons" aria-label="Navigation principale">
         <a class="btn" href="../../../index.html">Accueil</a>
         <a class="btn" href="../../../index.html#galerie">Galerie</a>
         <a class="btn" href="contact.html">Contact</a>
       </nav>
-      
     </header>
 
     <!-- Content -->
     <main class="card" role="main">
       <p class="lead">
-
         <h2>Number Cakes</h2>
         Hyper tendance, nos Number Cakes se déclinent sous différentes formes&nbsp;:
         <strong>chiffres, lettres, cercle, cœur</strong>, ou toute autre forme selon vos envies.
       </p>
 
-      <!-- ******* بخش دو ستونه ******* -->
-<section class="split"> 
-  <div>
-      <h2>Tarifs</h2>
-      <p>À partir de <strong>5&nbsp;€ la part</strong> (hors personnalisation). Les décorations spécifiques et les impressions alimentaires sont proposées en supplément.</p>
+      <!-- دو ستونه -->
+      <section class="split"> 
+        <div>
+          <h2>Tarifs</h2>
+          <p>À partir de <strong>5&nbsp;€ la part</strong> (hors personnalisation). Les décorations spécifiques et les impressions alimentaires sont proposées en supplément.</p>
 
-      <h2>Personnalisation</h2>
-      <p>Pour toute demande de devis, merci d’indiquer&nbsp;:</p>
-      <ul>
-        <li>le <strong>thème</strong> ;</li>
-        <li>le <strong>modèle</strong> (forme souhaitée) ;</li>
-        <li>le <strong>goût</strong> et la <strong>base</strong> (génoise nature, chocolat ou sablée) ;</li>
-        <li>la <strong>crème</strong> (chantilly mascarpone, ganache, crème diplomate…) ;</li>
-        <li>les <strong>suppléments</strong> gourmands : speculoos, caramel beurre salé, fruits rouges, etc.</li>
-      </ul>
+          <h2>Personnalisation</h2>
+          <p>Pour toute demande de devis, merci d’indiquer&nbsp;:</p>
+          <ul>
+            <li>le <strong>thème</strong> ;</li>
+            <li>le <strong>modèle</strong> (forme souhaitée) ;</li>
+            <li>le <strong>goût</strong> et la <strong>base</strong> (génoise nature, chocolat ou sablée) ;</li>
+            <li>la <strong>crème</strong> (chantilly mascarpone, ganache, crème diplomate…) ;</li>
+            <li>les <strong>suppléments</strong> gourmands : speculoos, caramel beurre salé, fruits rouges, etc.</li>
+          </ul>
 
-      <h2>Portions disponibles</h2>
-      <p>Commandes possibles pour <strong>8</strong>, <strong>12</strong>, <strong>15 parts</strong>, et selon certaines formes, <strong>au-delà</strong>.</p>
-  </div>
-  <div>
+          <h2>Portions disponibles</h2>
+          <p>Commandes possibles pour <strong>8</strong>, <strong>12</strong>, <strong>15 parts</strong>, et selon certaines formes, <strong>au-delà</strong>.</p>
+        </div>
 
-    <div>
-          <!-- تصویر نمونهٔ اصلی -->
+        <div>
           <div class="media">
-            <!-- مسیر را با عکس خودت عوض کن -->
             <img src="../../../assets/galerie/numbercakes/nc.png" alt="Number cake" loading="lazy">
           </div>
 
-          <!-- کلمات کلیدی کوچک (اختیاری) -->
           <div class="cta" style="margin-top:12px">
-            <span class="badge" style="background:#fff;color:var(--navy);border:1px solid var(--border)">Rose ou Bleu</span>
             <span class="badge" style="background:#fff;color:var(--navy);border:1px solid var(--border)">Chantilly Mascarpone</span>
             <span class="badge" style="background:#fff;color:var(--navy);border:1px solid var(--border)">Buttercream</span>
+            <span class="badge" style="background:#fff;color:var(--navy);border:1px solid var(--border)">Fruits Rouges</span>
           </div>
         </div>
       </section>
 
       <h2>Quelques réalisations</h2>
-  
       <div class="gallery">
-        <!-- مسیر عکس‌ها را به پوشهٔ خودت تغییر بده -->
         <img src="../../../assets/galerie/numbercakes/nc1.jpg" alt="Number cake chiffre 1">
         <img src="../../../assets/galerie/numbercakes/nc2.jpg" alt="Number cake chiffre 2">
         <img src="../../../assets/galerie/numbercakes/nc3.jpg" alt="Number cake cœur">
@@ -155,8 +192,8 @@
       </div>
 
       <div class="cta">
-        <a class="btn" href="mailto:lida2025@lespatisseriesdelida.fr">Demander un devis</a>
-        <a class="btn" href="/galerie.html">Voir la galerie</a>
+        <a class="btn" href="mailto:contact@lespatisseriesdelida.fr">Demander un devis</a>
+        <a class="btn" href="../../../index.html#galerie">Voir la galerie</a>
       </div>
 
       <footer>
