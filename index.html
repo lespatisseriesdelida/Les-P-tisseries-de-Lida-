@@ -5,170 +5,176 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Les Pâtisseries de Lida — Cake Design & Pâtisserie fine</title>
   <meta name="description" content="Gâteaux sur mesure, pièces montées élégantes, desserts raffinés, petits fours salés et verrines. Créations artisanales par Les Pâtisseries de Lida.">
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- Hero / Header -->
-  <header class="hero">
-    <img class="logo" src="assets/mainlogo.png" alt="Logo Les Pâtisseries de Lida">
-    <h1>Les Pâtisseries de Lida</h1>
+  <a id="top"></a>
 
-    <nav class="nav-buttons">
-      <a href="#creations" class="btn">Créations</a>
-      <a href="#sale" class="btn">Salé</a>
-      <a href="#galerie" class="btn">Galerie</a>
-      <a href="#contact" class="btn">Contact</a>
-      <a class="btn btn--pill btn--white" href="#">Commander</a>    
-    </nav>
-  </header>
+  <!-- ✅ همه‌چیز داخل wrap قرار می‌گیرد -->
+  <div class="wrap">
+    <!-- Hero / Header (لبهٔ بالایی کادر) -->
+    <header class="hero">
+      <img class="logo" src="assets/mainlogo.png" alt="Logo Les Pâtisseries de Lida">
+      <h1>Les Pâtisseries de Lida</h1>
 
-  <main>
-    <!-- Sucré -->
-    <section id="creations" class="section">
-      <p class="subtitle">
-        Nous sommes fiers de vous présenter notre exquise collection de gâteaux,
-        qui vous mettront l’eau à la bouche et vous donneront envie d’en redemander.
-        Des grands classiques aux créations les plus innovantes, chaque bouchée
-        vous transportera dans un univers de pur délice.
-      </p>
+      <nav class="nav-buttons" aria-label="Navigation principale">
+        <a href="#creations" class="btn">Créations</a>
+        <a href="#sale" class="btn">Salé</a>
+        <a href="#galerie" class="btn">Galerie</a>
+        <a href="#contact" class="btn">Contact</a>
+        <a class="btn" href="#">Commander</a>
+      </nav>
+    </header>
 
-      <h2 class="handwritten">Les créations de Lida</h2>
-      <h2 class="section-title">Nos créations sucrées</h2>
+    <!-- ✅ بدنه داخل کارت با گوشه‌های گرد پایین -->
+    <main class="card" role="main">
+      <!-- Sucré -->
+      <section id="creations" class="section">
+        <p class="subtitle">
+          Nous sommes fiers de vous présenter notre exquise collection de gâteaux,
+          qui vous mettront l’eau à la bouche et vous donneront envie d’en redemander.
+          Des grands classiques aux créations les plus innovantes, chaque bouchée
+          vous transportera dans un univers de pur délice.
+        </p>
 
-      <p>
-        Gâteaux d’exception, pièces montées élégantes et desserts raffinés — entièrement personnalisés selon vos envies,
-        thèmes et nombre de parts.
-      </p>
+        <h2 class="handwritten">Les créations de Lida</h2>
+        <h2 class="section-title">Nos créations sucrées</h2>
 
-      <ul class="cards">
-        <li>
-          <h3 class="handwritten">Gâteaux sur mesure</h3>
-          <p>Anniversaires, baby shower, corporate… Thèmes, formes et textures modernes.</p>
-        </li>
-        <li>
-          <h3>Pièces montées</h3>
-          <p>Architecture élégante pour mariages et grandes réceptions.</p>
-        </li>
-        <li>
-          <h3>Desserts raffinés</h3>
-          <p>Entremets, cupcakes, biscuits décorés et autres douceurs.</p>
-        </li>
-      </ul>
-    </section>
+        <p>
+          Gâteaux d’exception, pièces montées élégantes et desserts raffinés — entièrement personnalisés selon vos envies,
+          thèmes et nombre de parts.
+        </p>
 
-    <!-- Salé -->
-    <section id="sale" class="section alt">
-      <h2>L’art du salé</h2>
-      <p>
-        Pour compléter l’univers sucré, nous proposons aussi des <strong>petits fours salés</strong> et des
-        <strong>verrines gourmandes</strong> — parfaits pour cocktails, réceptions et buffets élégants.
-      </p>
-      <ul class="cards">
-        <li>
-          <h3>Petits fours salés</h3>
-          <p>Feuilletés, mini-tartelettes et bouchées selon la saison.</p>
-        </li>
-        <li>
-          <h3>Verrines</h3>
-          <p>Compositions fraîches, équilibrées et élégantes.</p>
-        </li>
-        <li>
-          <h3>Formules réception</h3>
-          <p>Assortiments sucré/salé coordonnés pour vos événements.</p>
-        </li>
-      </ul>
-    </section>
+        <ul class="cards">
+          <li>
+            <h3 class="handwritten">Gâteaux sur mesure</h3>
+            <p>Anniversaires, baby shower, corporate… Thèmes, formes et textures modernes.</p>
+          </li>
+          <li>
+            <h3>Pièces montées</h3>
+            <p>Architecture élégante pour mariages et grandes réceptions.</p>
+          </li>
+          <li>
+            <h3>Desserts raffinés</h3>
+            <p>Entremets, cupcakes, biscuits décorés et autres douceurs.</p>
+          </li>
+        </ul>
+      </section>
 
-    <!-- Galerie -->
-    <section id="galerie" class="section">
-      <h2>Galerie</h2>
-      <p>Choisissez une catégorie pour découvrir nos créations.</p>
+      <!-- Salé -->
+      <section id="sale" class="section alt">
+        <h2>L’art du salé</h2>
+        <p>
+          Pour compléter l’univers sucré, nous proposons aussi des <strong>petits fours salés</strong> et des
+          <strong>verrines gourmandes</strong> — parfaits pour cocktails, réceptions et buffets élégants.
+        </p>
+        <ul class="cards">
+          <li>
+            <h3>Petits fours salés</h3>
+            <p>Feuilletés, mini-tartelettes et bouchées selon la saison.</p>
+          </li>
+          <li>
+            <h3>Verrines</h3>
+            <p>Compositions fraîches, équilibrées et élégantes.</p>
+          </li>
+          <li>
+            <h3>Formules réception</h3>
+            <p>Assortiments sucré/salé coordonnés pour vos événements.</p>
+          </li>
+        </ul>
+      </section>
 
-      <div class="gallery cards">
-        <a class="cat-card" href="assets/galerie/anniversaireenfants/anniversairesenfants.html">
-          <img src="assets/galerie/anniversairesenfants/anvenft.png" alt="Gâteaux d'anniversaire pour enfants">
-          <h3>Anniversaires Enfants</h3>
-        </a>
+      <!-- Galerie -->
+      <section id="galerie" class="section">
+        <h2>Galerie</h2>
+        <p>Choisissez une catégorie pour découvrir nos créations.</p>
 
-        <a class="cat-card" href="assets/galerie/mariage/mariage.html">
-          <img src="assets/galerie/mariage/1-1.png" alt="Gâteaux de mariage">
-          <h3>Mariage</h3>
-        </a>
+        <div class="gallery cards">
+          <a class="cat-card" href="assets/galerie/anniversaireenfants/anniversairesenfants.html">
+            <img src="assets/galerie/anniversairesenfants/anvenft.png" alt="Gâteaux d'anniversaire pour enfants">
+            <h3>Anniversaires Enfants</h3>
+          </a>
 
-        <a class="cat-card" href="assets/galerie/numbercakes/numbercakes.html">
-          <img src="assets/galerie/numbercakes/numbercake.png" alt="Number cakes">
-          <h3>Number Cake</h3>
-        </a>
+          <a class="cat-card" href="assets/galerie/mariage/mariage.html">
+            <img src="assets/galerie/mariage/1-1.png" alt="Gâteaux de mariage">
+            <h3>Mariage</h3>
+          </a>
 
-        <a class="cat-card" href="assets/galerie/bento/bento.html">
-          <img src="assets/galerie/bento/bento.png" alt="Bento cakes">
-          <h3>Bento Cake</h3>
-        </a>
+          <a class="cat-card" href="assets/galerie/numbercakes/numbercakes.html">
+            <img src="assets/galerie/numbercakes/numbercake.png" alt="Number cakes">
+            <h3>Number Cake</h3>
+          </a>
 
-        <a class="cat-card" href="assets/galerie/biscuitperso/biscuitperso.html">
-          <img src="assets/galerie/biscuitperso/sable.png" alt="Biscuits personnalisés">
-          <h3>Biscuits personnalisés</h3>
-        </a>
+          <a class="cat-card" href="assets/galerie/bento/bento.html">
+            <img src="assets/galerie/bento/bento.png" alt="Bento cakes">
+            <h3>Bento Cake</h3>
+          </a>
 
-        <a class="cat-card" href="assets/galerie/gender-reveal/gender-reveal.html">
-          <img src="assets/galerie/gender-reveal/gender1.png" alt="Gender-reveal">
-          <h3>Gender Reveal</h3>
-        </a>
+          <a class="cat-card" href="assets/galerie/biscuitperso/biscuitperso.html">
+            <img src="assets/galerie/biscuitperso/sable.png" alt="Biscuits personnalisés">
+            <h3>Biscuits personnalisés</h3>
+          </a>
 
-        <a class="cat-card" href="assets/galerie/cupcakes/cupcakes.html">
-          <img src="assets/galerie/cupcakes/cupcakes.png" alt="Cupcakes personnalisés au thème">
-          <h3>Cupcakes</h3>
-        </a>
-      </div>
-    </section>
+          <a class="cat-card" href="assets/galerie/gender-reveal/gender-reveal.html">
+            <img src="assets/galerie/gender-reveal/gender1.png" alt="Gender-reveal">
+            <h3>Gender Reveal</h3>
+          </a>
 
-    <!-- Contact -->
-    <section id="contact" class="section alt contact">
-      <h2>Contact</h2>
-      <p>📍 Annœullin, France</p>
-      <p>📧 <a href="mailto:contact@lespatisseriesdelida.fr">contact@lespatisseriesdelida.fr</a></p>
-      <p>Pour une commande sur mesure : thème, date & nombre de parts.</p>
-    </section>
-  </main>
+          <a class="cat-card" href="assets/galerie/cupcakes/cupcakes.html">
+            <img src="assets/galerie/cupcakes/cupcakes.png" alt="Cupcakes personnalisés au thème">
+            <h3>Cupcakes</h3>
+          </a>
+        </div>
+      </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© <span id="year"></span> Les Pâtisseries de Lida — Tous droits réservés</p>
-  </footer>
-<!-- سال فوتر -->
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+      <!-- Contact -->
+      <section id="contact" class="section alt contact">
+        <h2>Contact</h2>
+        <p>📍 Annœullin, France</p>
+        <p>📧 <a href="mailto:contact@lespatisseriesdelida.fr">contact@lespatisseriesdelida.fr</a></p>
+        <p>Pour une commande sur mesure : thème, date & nombre de parts.</p>
+      </section>
 
-<!-- دکمهٔ برگشت به بالا (نسخهٔ لوکس با SVG) -->
-<button id="scrollTopBtn" class="scroll-top" title="Haut de page" aria-label="Revenir en haut">
-  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-    <path fill="currentColor" d="M12 4c.28 0 .53.11.71.29l6 6a1 1 0 1 1-1.42 1.42L13 7.41V19a1 1 0 1 1-2 0V7.41l-4.29 4.3A1 1 0 0 1 5.3 10.3l6-6A1 1 0 0 1 12 4z"/>
-  </svg>
-</button>
+      <!-- Footer داخل کارت -->
+      <footer>
+        © <span id="year"></span> Les Pâtisseries de Lida — Tous droits réservés
+      </footer>
+    </main>
+  </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const scrollBtn = document.getElementById('scrollTopBtn');
+  <!-- سال فوتر -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
-  const toggleBtn = () => {
-    const y = document.documentElement.scrollTop || document.body.scrollTop;
-    scrollBtn.style.display = y > 300 ? 'flex' : 'none';
-  };
-  window.addEventListener('scroll', toggleBtn, { passive: true });
-  toggleBtn();
+  <!-- Scroll-to-top (شناور و مستقل از کادر) -->
+  <button id="scrollTopBtn" class="scroll-top" title="Haut de page" aria-label="Revenir en haut">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="currentColor" d="M12 4c.28 0 .53.11.71.29l6 6a1 1 0 1 1-1.42 1.42L13 7.41V19a1 1 0 1 1-2 0V7.41l-4.29 4.3A1 1 0 0 1 5.3 10.3l6-6A1 1 0 0 1 12 4z"/>
+    </svg>
+  </button>
 
-  scrollBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-});
-</script>
-
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const scrollBtn = document.getElementById('scrollTopBtn');
+      const toggleBtn = () => {
+        const y = document.documentElement.scrollTop || document.body.scrollTop;
+        scrollBtn.style.display = y > 300 ? 'flex' : 'none';
+      };
+      window.addEventListener('scroll', toggleBtn, { passive: true });
+      toggleBtn();
+      scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
 </html>
