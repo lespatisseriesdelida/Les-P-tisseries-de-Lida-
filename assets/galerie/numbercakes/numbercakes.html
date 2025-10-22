@@ -67,6 +67,17 @@
       .brand{font-size:32px}
       .btn{font-size:20px; padding:9px 18px}
     }
+
+    /* بخش دو ستونه (توضیحات + تصویر) */
+    .split{display:grid; gap:22px; margin-top:8px}
+    @media(min-width:900px){ .split{grid-template-columns:1.1fr .9fr; align-items:center} }
+
+    .note{
+      font-size:14px; color:#555; background:#fff;
+      border:1px dashed #ead9c8; border-radius:14px; padding:12px 14px;
+      max-width:760px; margin:10px auto;
+    }
+    
   </style>
 </head>
 <body>
@@ -95,6 +106,8 @@
         <strong>chiffres, lettres, cercle, cœur</strong>, ou toute autre forme selon vos envies.
       </p>
 
+      <!-- ******* بخش دو ستونه ******* -->
+<section class="split"> 
       <h2>Tarifs</h2>
       <p>À partir de <strong>5&nbsp;€ la part</strong> (hors personnalisation). Les décorations spécifiques et les impressions alimentaires sont proposées en supplément.</p>
 
@@ -112,6 +125,7 @@
       <p>Commandes possibles pour <strong>8</strong>, <strong>12</strong>, <strong>15 parts</strong>, et selon certaines formes, <strong>au-delà</strong>.</p>
 
       <h2>Galerie</h2>
+</section>
       <div class="gallery">
         <!-- مسیر عکس‌ها را به پوشهٔ خودت تغییر بده -->
         <img src="../../../assets/galerie/numbercakes/nc1.jpg" alt="Number cake chiffre 1">
