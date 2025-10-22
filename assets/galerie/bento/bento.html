@@ -99,10 +99,11 @@
         <img src="assets/galerie/placeholder-3.jpg" alt="<!-- [ALT_3] -->" loading="lazy">
       </div>
 
-      <!-- دکمه برگشت به بالا -->
-      <div class="cta">
-        <a class="btn" href="#top">Retour en haut</a>
-      </div>
+      <button id="scrollTopBtn" class="scroll-top" title="Haut de page" aria-label="Revenir en haut">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="currentColor" d="M12 4c.28 0 .53.11.71.29l6 6a1 1 0 1 1-1.42 1.42L13 7.41V19a1 1 0 1 1-2 0V7.41l-4.29 4.3A1 1 0 0 1 5.3 10.3l6-6A1 1 0 0 1 12 4z"/>
+    </svg>
+      </button>
 
       <!-- فوتر مشترک -->
       <footer>
@@ -111,16 +112,5 @@
     </main>
   </div>
 
-  <!-- دکمه اسکرول‌تاپ (اختیاری) 
-  <button class="scroll-top" aria-label="Retour en haut" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M12 5l-7 7h14l-7-7zm0 7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
-  <script>
-    const st=document.querySelector('.scroll-top');
-    window.addEventListener('scroll',()=>{ st.style.display = window.scrollY>400?'flex':'none'; });
-  </script>
-  -->
 </body>
 </html>
