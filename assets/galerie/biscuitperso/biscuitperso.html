@@ -1,1 +1,126 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
+  <!-- ====== SEO پایه (برای هر صفحه پر کن) ====== -->
+  <title><!-- [PAGE_TITLE] مثلا: Gâteau Anniversaire — Les Pâtisseries de Lida --></title>
+  <meta name="description" content="<!-- [PAGE_DESCRIPTION] توضیح کوتاه صفحه 120-160 کاراکتر -->">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css"><!-- مسیر نسبی را تنظیم کن -->
+
+  <!-- Open Graph (اختیاری اما مفید برای اشتراک‌گذاری) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="<!-- [OG_TITLE] -->">
+  <meta property="og:description" content="<!-- [OG_DESCRIPTION] -->">
+  <meta property="og:image" content="<!-- [OG_IMAGE_URL] -->">
+  <meta property="og:url" content="<!-- [PAGE_URL] -->">
+</head>
+<body>
+  <a id="top"></a>
+  <div class="wrap">
+    <!-- ====== Header مشترک ====== -->
+    <header class="hero">
+      <!-- مسیر لوگو را متناسب با محل فایل تنظیم کن -->
+      <img class="logo" src="assets/mainlogo.png" alt="Logo Les Pâtisseries de Lida">
+
+      <!-- برند -->
+      <div class="brand">Les Pâtisseries de Lida</div>
+
+      <!-- برچسب/عنوان صفحه (اختیاری) -->
+      <div class="badge"><!-- [BADGE_TEXT] مثلا: Gâteau Anniversaire --></div>
+
+      <!-- ناوبری -->
+      <nav class="nav-buttons" aria-label="Navigation principale">
+        <a class="btn" href="index.html">Accueil</a>
+        <a class="btn" href="index.html#galerie">Galerie</a>
+        <a class="btn" href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- ====== Main محتوا ====== -->
+    <main class="card" role="main">
+      <!-- لید/خلاصهٔ صفحه -->
+      <p class="lead">
+        <!-- [LEAD] یک جمله معرفی دلنشین دربارهٔ این دسته/صفحه -->
+      </p>
+
+      <!-- سکشن دو ستونه (اگر لازم بود) -->
+      <section class="split">
+        <div>
+          <h2><!-- [H2_1] --></h2>
+          <p><!-- [PARAGRAPH_1] --></p>
+          <ul>
+            <!-- آیتم‌ها -->
+            <li><!-- [ITEM_1] --></li>
+            <li><!-- [ITEM_2] --></li>
+            <li><!-- [ITEM_3] --></li>
+          </ul>
+
+          <h2><!-- [H2_2] --></h2>
+          <p><!-- [PARAGRAPH_2] --></p>
+
+          <!-- CTA ها -->
+          <div class="cta">
+            <a class="btn" href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener">Commander via WhatsApp</a>
+            <a class="btn" href="mailto:contact@lespatisseriesdelida.fr">Demander un devis</a>
+          </div>
+
+          <!-- نکته/نوت (اختیاری) -->
+          <p class="note"><!-- [NOTE_TEXT] --></p>
+        </div>
+
+        <div>
+          <!-- مدیا اصلی (اختیاری) -->
+          <div class="media">
+            <img src="assets/galerie/sample.jpg" alt="<!-- [ALT_TEXT] -->" loading="lazy">
+          </div>
+
+          <!-- برچسب‌های کوچک (اختیاری) -->
+          <div class="cta small-top">
+            <span class="badge" style="background:#fff;color:var(--navy);border:1px solid var(--border)"><!-- Tag 1 --></span>
+            <span class="badge" style="background:#fff;color:var(--navy);border:1px solid var(--border)"><!-- Tag 2 --></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- گالری (اختیاری) -->
+      <h2><!-- [H2_GALLERY] Par ex. Quelques réalisations --></h2>
+      <div class="gallery">
+        <img src="assets/galerie/placeholder-1.jpg" alt="<!-- [ALT_1] -->" loading="lazy">
+        <img src="assets/galerie/placeholder-2.jpg" alt="<!-- [ALT_2] -->" loading="lazy">
+        <img src="assets/galerie/placeholder-3.jpg" alt="<!-- [ALT_3] -->" loading="lazy">
+      </div>
+
+      <!-- دکمه برگشت به بالا -->
+      <div class="cta">
+        <a class="btn" href="#top">Retour en haut</a>
+      </div>
+
+      <!-- فوتر مشترک -->
+      <footer>
+        © Les Pâtisseries de Lida — Fait main, sur commande
+      </footer>
+    </main>
+  </div>
+
+  <!-- دکمه اسکرول‌تاپ (اختیاری) 
+  <button class="scroll-top" aria-label="Retour en haut" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 5l-7 7h14l-7-7zm0 7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  <script>
+    const st=document.querySelector('.scroll-top');
+    window.addEventListener('scroll',()=>{ st.style.display = window.scrollY>400?'flex':'none'; });
+  </script>
+  -->
+</body>
+</html>
