@@ -5,44 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact & Commande — Les Pâtisseries de Lida</title>
   <meta name="description" content="Contactez Les Pâtisseries de Lida pour vos commandes personnalisées : WhatsApp, Instagram, Facebook ou formulaire de commande.">
-  
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&family=Great+Vibes&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
   <link rel="stylesheet" href="../style.css">
+
+  <!-- Font Awesome برای آیکون‌ها -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-7x6Ij+RZC1SzMxzMf1uwGqTr8pX0H0czBpDNqJ3VljHrdC1w7xPGCe5bHeQGIt+IQSzUtZVzYy2nhZ3N1Wlvug==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
   <div class="wrap">
+    <!-- Header -->
     <header class="hero">
       <img class="logo" src="../assets/mainlogo.png" alt="Logo Les Pâtisseries de Lida">
       <div class="brand">Les Pâtisseries de Lida</div>
-    
+      <div class="badge">Contact & Commande</div>
+
       <nav class="nav-buttons">
         <a class="btn" href="../index.html">Accueil</a>
         <a class="btn" href="../index.html#galerie">Galerie</a>
-        
+        <a class="btn" href="#">Contact</a>
       </nav>
     </header>
 
+    <!-- Main -->
     <main class="card" role="main">
       <p class="lead">Pour toute commande personnalisée, contactez-nous via WhatsApp, Instagram, Facebook ou le formulaire ci-dessous 💬</p>
 
       <!-- Liens directs -->
-      <section class="cta">
-        <a class="btn" href="https://wa.me/33784644014" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn" href="tel:+33784644014">Appeler</a>
-        <a class="btn" href="https://www.instagram.com/lespatisseriesdelida59?igsh=ZnF6dW04dnVpZHI2" target="_blank" rel="noopener">Instagram</a>
-        <a class="btn" href="https://www.facebook.com/share/1BNDDuTGgG/" target="_blank" rel="noopener">Facebook</a>
+      <section class="cta social-links">
+        <a class="btn social whatsapp" href="https://wa.me/33784644014" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+
+        <a class="btn social phone" href="tel:+33784644014">
+          <i class="fas fa-phone"></i> Appeler
+        </a>
+
+        <a class="btn social instagram" href="https://www.instagram.com/lespatisseriesdelida59?igsh=ZnF6dW04dnVpZHI2" target="_blank" rel="noopener">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+
+        <a class="btn social facebook" href="https://www.facebook.com/share/1BNDDuTGgG/" target="_blank" rel="noopener">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
       </section>
 
-      <!-- Formulaire de commande -->
+      <!-- Formulaire -->
       <section>
         <h2>Formulaire de commande</h2>
         <p>Remplissez le formulaire ci-dessous pour recevoir un devis personnalisé 📩</p>
 
-        <!-- Utilisation Formspree pour l'envoi (à activer après explication) -->
         <form action="https://formspree.io/f/xxxxxxxx" method="POST" enctype="multipart/form-data" class="order-form">
-
           <label>Nom complet :</label>
           <input type="text" name="nom" required>
 
@@ -64,7 +83,7 @@
           <label>Saveur / parfum :</label>
           <input type="text" name="saveur" placeholder="ex. vanille, chocolat, fraise...">
 
-          <label>Décoration spéciale ou message à ajouter :</label>
+          <label>Décoration spéciale ou message :</label>
           <textarea name="message" rows="4" placeholder="Écrivez vos précisions ici..."></textarea>
 
           <label>Photos d’inspiration (vous pouvez en sélectionner plusieurs) :</label>
@@ -80,37 +99,27 @@
     </main>
   </div>
 
+  <!-- Style مخصوص آیکون‌های رنگی -->
   <style>
-    /* استایل ساده مخصوص فرم */
-    form.order-form{
+    .social-links .btn {
       display:flex;
-      flex-direction:column;
-      gap:12px;
-      max-width:600px;
-      margin:0 auto 30px;
+      align-items:center;
+      gap:8px;
+      font-size:20px;
+      justify-content:center;
+      min-width:180px;
     }
-    form.order-form label{
-      font-weight:600;
-      color:var(--navy);
+    .btn i {
+      font-size:22px;
     }
-    form.order-form input, form.order-form textarea{
-      border:1px solid var(--border);
-      border-radius:8px;
-      padding:10px 12px;
-      font-size:16px;
-      font-family:inherit;
-      background:#fff;
+    .btn.social.whatsapp i { color:#25D366; }
+    .btn.social.instagram i { 
+      background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
     }
-    form.order-form input:focus, form.order-form textarea:focus{
-      outline:none;
-      border-color:var(--accent);
-      box-shadow:0 0 0 3px rgba(202,162,77,.25);
-    }
-    form.order-form button{
-      align-self:center;
-      cursor:pointer;
-      margin-top:10px;
-    }
+    .btn.social.facebook i { color:#1877F2; }
+    .btn.social.phone i { color:#1a2238; }
   </style>
 </body>
 </html>
