@@ -275,3 +275,46 @@ footer{
     text-decoration: none;
     font-weight: bold;
   }
+form.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+form.order-form label {
+  font-weight: 600;
+  color: var(--navy);
+}
+
+form.order-form input,
+form.order-form textarea {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 16px;
+  font-family: inherit;
+  background: #fff;
+}
+
+form.order-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+form.order-form input:focus,
+form.order-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(202,162,77,.25);
+}
+
+form.order-form button {
+  display: block;
+  margin: 20px auto 0;  /* وسط */
+  /* یا برای راست: margin: 20px 0 0 auto; */
+  padding: 12px 28px;
+  font-size: 20px;
+  cursor: pointer;
+}
