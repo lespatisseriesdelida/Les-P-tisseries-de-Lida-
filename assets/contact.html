@@ -61,8 +61,10 @@
         <p>Remplissez le formulaire ci-dessous pour recevoir un devis personnalisé 📩</p>
 
         <form action="https://formspree.io/f/xzzjlnje" method="POST" enctype="multipart/form-data" class="order-form">
-          <p><label>Nom complet :</label>
-          <input type="text" name="nom" required></p>
+          <p>
+            <label>Nom complet :</label>
+          <input type="text" name="nom" required>
+          </p>
 
         <p>    <label>Email :</label>
           <input type="email" name="email" required> </p>
@@ -77,22 +79,34 @@
           <input type="date" name="date" required>
           </p>
 
-          <label>Nombre de parts :</label>
+          <p>
+            <label>Nombre de parts :</label>
           <input type="number" name="parts" min="1" placeholder="ex. 20" required>
+          </p>
 
-          <label>Thème / Modèle souhaité :</label>
+          <p>
+            <label>Thème / Modèle souhaité :</label>
           <input type="text" name="theme" placeholder="ex. princesse, baby shower, chic, floral..." required>
+          </p>
 
+          <p>
           <label>Saveur / parfum :</label>
           <input type="text" name="saveur" placeholder="ex. vanille, chocolat, fraise...">
+          </p>
 
+          <p>
           <label>Décoration spéciale ou message :</label>
           <textarea name="message" rows="4" placeholder="Écrivez vos précisions ici..."></textarea>
+          </p>
 
+          <p>
           <label>Photos d’inspiration (vous pouvez en sélectionner plusieurs) :</label>
           <input type="file" name="images" multiple accept="image/*">
+          </p>
 
-          <button type="submit" class="btn">Envoyer la commande</button>
+          <p>
+            <button type="submit" class="btn">Envoyer la commande</button>
+          </p>
         </form>
       </section>
 
