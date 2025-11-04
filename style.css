@@ -391,3 +391,42 @@ form.order-form button {
   font-size: 20px;
   cursor: pointer;
 }
+/* ==== Centrage global des sections et des cartes ==== */
+
+/* همهٔ سکشن‌ها محتواشون وسط باشه */
+.section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* پاراگراف‌های داخل سکشن‌ها وسط و با عرض مناسب */
+.section > p,
+.section > .subtitle {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* همهٔ لیست‌های کارت را وسط می‌آوریم */
+ul.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;     /* خود لی‌ها وسط */
+  max-width: 100%;
+  margin: 0 auto 16px;
+}
+
+/* خود کارت‌ها اندازهٔ ثابت و وسط */
+ul.cards li {
+  width: 100%;
+  max-width: 720px;        /* کادری که تو می‌خوای */
+  text-align: center;
+}
+
+/* گالری کارت‌دار هم وسط باشه */
+.gallery.cards {
+  justify-content: center;
+}
