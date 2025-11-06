@@ -466,21 +466,52 @@ ul.cards li {
       to { opacity:1; transform:translateY(0); }
     }
 
-.social-mini a {
-  display:inline-flex;
-  width:38px;
-  height:38px;
-  border-radius:999px;
-  align-items:center;
-  justify-content:center;
-  background:#fff;
-  border:1px solid rgba(0,0,0,.05);
-  box-shadow:0 2px 6px rgba(0,0,0,.08);
-  color:#1877F2;
-  font-size:18px;
-  transition:.2s;
+./* ==== آیکون‌های گرد شبکه‌های اجتماعی ==== */
+.social-mini {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
 }
-.social-mini a:hover {
-  background:#1877F2;
-  color:#fff;
+
+.social-mini a {
+  display: inline-flex;
+  width: 45px;
+  height: 45px;
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  font-size: 20px;
+  transition: .25s ease;
+}
+
+/* 🔵 Facebook */
+.social-mini a.facebook {
+  color: #1877F2;
+}
+.social-mini a.facebook:hover {
+  background: #1877F2;
+  color: #fff;
+}
+
+/* 🟣 Instagram */
+.social-mini a.instagram {
+  background: #fff;
+  color: #d6249f;
+}
+.social-mini a.instagram:hover {
+  background: #d6249f;
+  color: #fff;
+}
+
+/* 🟢 WhatsApp */
+.social-mini a.whatsapp {
+  color: #25D366;
+}
+.social-mini a.whatsapp:hover {
+  background: #25D366;
+  color: #fff;
 }
