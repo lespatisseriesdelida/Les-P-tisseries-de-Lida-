@@ -430,3 +430,39 @@ ul.cards li {
 .gallery.cards {
   justify-content: center;
 }
+  
+.social-links .btn {
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-size:20px;
+      justify-content:center;
+      min-width:180px;
+    }
+    .btn i { font-size:22px; }
+    .btn.social.whatsapp i { color:#25D366; }
+    .btn.social.instagram i { 
+      background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+    .btn.social.facebook i { color:#1877F2; }
+    .btn.social.phone i { color:#1a2238; }
+
+    .confirmation-message {
+      text-align: center;
+      font-size: 18px;
+      color: var(--navy);
+      background: #fff7e0;
+      border: 1px solid rgba(202,162,77,.3);
+      border-radius: 12px;
+      padding: 14px;
+      margin-top: 20px;
+      box-shadow: 0 3px 6px rgba(0,0,0,.08);
+      animation: fadeIn .6s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity:0; transform:translateY(5px); }
+      to { opacity:1; transform:translateY(0); }
+    }
+  
