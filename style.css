@@ -515,3 +515,54 @@ ul.cards li {
   background: #25D366;
   color: #fff;
 }
+
+.cookie-banner {
+  position: fixed;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 6px 16px rgba(0,0,0,.12);
+  border-radius: 16px;
+  padding: 14px 16px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  z-index: 9999;
+  max-width: 90%;
+  font-size: 14px;
+}
+.cookie-banner p {
+  margin: 0;
+}
+.cookie-actions {
+  display: flex;
+  gap: 8px;
+}
+.cookie-actions button {
+  border: none;
+  border-radius: 999px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: inherit;
+}
+#cookie-accept {
+  background: linear-gradient(#fff7dc, var(--accent));
+  color: var(--navy);
+  border: 1px solid rgba(0,0,0,.03);
+}
+#cookie-decline {
+  background: #f2f2f2;
+  color: #333;
+}
+@media (max-width: 600px) {
+  .cookie-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cookie-actions {
+    width: 100%;
+  }
+}
