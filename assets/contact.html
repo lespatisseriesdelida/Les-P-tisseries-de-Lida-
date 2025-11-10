@@ -18,6 +18,56 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
+<!-- Cookie consent bar -->
+<div id="cookie-banner" class="cookie-banner" style="display:none;">
+  <p>
+    Nous utilisons des cookies uniquement pour mesurer l’audience du site.
+    <a href="#">En savoir plus</a>
+  </p>
+  <div class="cookie-actions">
+    <button id="cookie-accept">J’accepte</button>
+    <button id="cookie-decline">Plus tard</button>
+  </div>
+</div>
+
+<script>
+  // چک کنیم قبلاً قبول کرده یا نه
+  const banner = document.getElementById('cookie-banner');
+  const accepted = localStorage.getItem('lida_cookie_consent');
+
+  // تابع لود کردن گوگل آنالیتیکس فقط وقتی که کاربر قبول کرد
+  function loadAnalytics() {
+    // این اسکریپت رو با آیدی خودت عوض کن
+    const ga = document.createElement('script');
+    ga.async = true;
+    ga.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"; // ← اینو عوض کن
+    document.head.appendChild(ga);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX'); // ← اینو هم عوض کن
+  }
+
+  if (!accepted) {
+    banner.style.display = 'flex';
+  } else if (accepted === 'yes') {
+    loadAnalytics();
+  }
+
+  document.getElementById('cookie-accept').addEventListener('click', () => {
+    localStorage.setItem('lida_cookie_consent', 'yes');
+    banner.style.display = 'none';
+    loadAnalytics();
+  });
+
+  document.getElementById('cookie-decline').addEventListener('click', () => {
+    localStorage.setItem('lida_cookie_consent', 'no');
+    banner.style.display = 'none';
+  });
+</script>
+  
 <body>
   <div class="wrap">
     <header class="hero">
