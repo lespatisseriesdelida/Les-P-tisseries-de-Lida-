@@ -566,3 +566,16 @@ ul.cards li {
     width: 100%;
   }
 }
+.img-40 {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* وسط چین */
+}
+
+/* تبلت و دسکتاپ */
+@media (min-width: 768px) {
+  .img-40 {
+    width: 40%;
+  }
+}
