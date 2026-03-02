@@ -566,3 +566,27 @@ footer{
   .scroll-top:hover,
   .scroll-top:active{ transform:none; }
 }
+
+/* Google Form embed */
+
+.gform-embed{
+  width:100%;
+  max-width:900px;
+  margin:0 auto;
+  background:#fff;
+  border:1px solid rgba(0,0,0,.08);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 6px 16px rgba(0,0,0,.06);
+}
+
+.gform-embed iframe{
+  width:100%;
+  border:0;
+  display:block;
+}
+
+/* Mobile: ارتفاع بیشتر برای اسکرول کمتر */
+@media (max-width:600px){
+  .gform-embed iframe{ height:1100px; }
+}
