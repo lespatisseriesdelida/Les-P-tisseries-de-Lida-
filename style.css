@@ -591,3 +591,24 @@ footer{
 @media (max-width:600px){
   .gform-embed iframe{ height:1100px; }
 }
+/* بخش ریویو اسلایدر */
+.reviews-slider{
+  max-width:600px;
+  margin:40px auto;
+  text-align:center;
+  font-size:18px;
+}
+
+.review{
+  display:none;
+}
+
+.review.active{
+  display:block;
+}
+
+.review span{
+  display:block;
+  margin-top:10px;
+  font-weight:600;
+}
