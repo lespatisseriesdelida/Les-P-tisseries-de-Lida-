@@ -205,7 +205,7 @@
 <section class="section alt" id="avis-google">
   <h2>💛 Votre avis compte 💛</h2>
 
-  <div class="review-box">
+  <div class="review-frame">
 
   <div class="review active">
     <div class="stars">★★★★★</div>
@@ -215,19 +215,14 @@
 
   <div class="review">
     <div class="stars">★★★★★</div>
-    <p>Très professionnel et superbe design.</p>
+    <p>Super design et très professionnel.</p>
     <span>— Marie</span>
   </div>
 
   <div class="review">
     <div class="stars">★★★★★</div>
-    <p>Les enfants ont adoré le gâteau. Je recommande !</p>
+    <p>Les enfants ont adoré le gâteau !</p>
     <span>— Julien</span>
-  </div>
-
-  <div class="review-controls">
-    <button onclick="prevReview()">❮</button>
-    <button onclick="nextReview()">❯</button>
   </div>
 
 </div>
@@ -363,28 +358,24 @@
 
 
 <script>
-let current = 0;
+let reviewIndex = 0;
 const reviews = document.querySelectorAll(".review");
 
-function showReview(index){
+function showReviews(){
   reviews.forEach(r => r.classList.remove("active"));
-  reviews[index].classList.add("active");
+  reviews[reviewIndex].classList.add("active");
+
+  reviewIndex++;
+  if(reviewIndex >= reviews.length){
+    reviewIndex = 0;
+  }
 }
 
-function nextReview(){
-  current = (current + 1) % reviews.length;
-  showReview(current);
-}
+setInterval(showReviews, 5000);
 
-function prevReview(){
-  current = (current - 1 + reviews.length) % reviews.length;
-  showReview(current);
-}
-
-setInterval(nextReview, 5000);
-
-showReview(current);
+showReviews();
 </script>
+
   
 </body>
 </html>
