@@ -205,6 +205,28 @@
 <section class="section alt" id="avis-google">
   <h2>💛 Votre avis compte 💛</h2>
 
+  <div class="reviews-slider">
+
+  <div class="review active">
+    ⭐⭐⭐⭐⭐
+    <p>Magnifique gâteau et très délicieux ! Merci beaucoup.</p>
+    <span>— Sophie</span>
+  </div>
+
+  <div class="review">
+    ⭐⭐⭐⭐⭐
+    <p>Très professionnel et super beau design.</p>
+    <span>— Marie</span>
+  </div>
+
+  <div class="review">
+    ⭐⭐⭐⭐⭐
+    <p>Les enfants ont adoré le gâteau !</p>
+    <span>— Julien</span>
+  </div>
+
+  </div>
+
   <p class="subtitle">
     Vous avez goûté nos créations ?  
     Partagez votre expérience sur Google 
@@ -333,6 +355,23 @@
       to { opacity:1; transform:translateY(0); }
     }
   </style>
+
+<script>
+let index = 0;
+const reviews = document.querySelectorAll(".review");
+
+function showReview(){
+  reviews.forEach(r => r.classList.remove("active"));
+  reviews[index].classList.add("active");
+
+  index++;
+  if(index >= reviews.length){
+    index = 0;
+  }
+}
+
+setInterval(showReview, 4000);
+</script>
   
 </body>
 </html>
