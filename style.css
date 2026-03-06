@@ -593,13 +593,16 @@ footer{
 }
 /* بخش ریویو اسلایدر */
 
-.review-box{
-  max-width:600px;
+.review-frame{
+  max-width:650px;
   margin:40px auto;
-  padding:25px;
+  padding:30px;
+
   background:white;
-  border-radius:16px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  border:3px solid var(--accent);
+  border-radius:20px;
+
+  box-shadow:0 8px 20px rgba(202,162,77,0.25);
   text-align:center;
 }
 
@@ -617,17 +620,8 @@ footer{
   margin-bottom:10px;
 }
 
-.review-controls{
-  margin-top:15px;
-}
-
-.review-controls button{
-  background:var(--accent);
-  border:none;
-  border-radius:50%;
-  width:35px;
-  height:35px;
-  cursor:pointer;
-  font-size:18px;
-  margin:5px;
+.review span{
+  display:block;
+  margin-top:10px;
+  font-weight:600;
 }
