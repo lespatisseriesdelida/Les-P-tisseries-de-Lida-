@@ -361,21 +361,29 @@
     }
   </style>
 
+
 <script>
-let index = 0;
+let current = 0;
 const reviews = document.querySelectorAll(".review");
 
-function showReview(){
+function showReview(index){
   reviews.forEach(r => r.classList.remove("active"));
   reviews[index].classList.add("active");
-
-  index++;
-  if(index >= reviews.length){
-    index = 0;
-  }
 }
 
-setInterval(showReview, 4000);
+function nextReview(){
+  current = (current + 1) % reviews.length;
+  showReview(current);
+}
+
+function prevReview(){
+  current = (current - 1 + reviews.length) % reviews.length;
+  showReview(current);
+}
+
+setInterval(nextReview, 5000);
+
+showReview(current);
 </script>
   
 </body>
