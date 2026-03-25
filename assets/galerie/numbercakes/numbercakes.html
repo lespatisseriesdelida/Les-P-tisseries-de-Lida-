@@ -266,6 +266,10 @@
 
       <h2>Quelques réalisations</h2>
       <div class="gallery">
+
+        <a href="image1.jpg" class="gallery-item">
+  <img src="image1.jpg">
+        </a>
         <img src="../../../assets/galerie/numbercakes/nc1.jpg" alt="Number cake chiffre 1">
         <img src="../../../assets/galerie/numbercakes/nc2.jpg" alt="Number cake chiffre 2">
         <img src="../../../assets/galerie/numbercakes/nc3.jpg" alt="Number cake cœur">
@@ -286,25 +290,86 @@
 
 <!-- ساخت گالری با لینک‌ها -->
 <script>
-document.querySelectorAll('.gallery img').forEach(img => {
-  img.addEventListener('click', () => {
-    // ایجاد لایت‌باکس
-    const lightbox = document.createElement('div');
-    lightbox.classList.add('lightbox');
-    lightbox.innerHTML = `
-      <a href="#" class="lightbox-close">&times;</a>
-      <img src="${img.src}" alt="${img.alt}">
-    `;
-    document.body.appendChild(lightbox);
-    lightbox.style.display = 'flex';
+const images = document.querySelectorAll(".gallery img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
 
-    // بستن با کلیک
-    lightbox.addEventListener('click', e => {
-      if (e.target === lightbox || e.target.classList.contains('lightbox-close')) {
-        lightbox.remove();
-      }
-    });
+let currentIndex = 0;
+
+// باز کردن
+images.forEach((img, index) => {
+  img.addEventListener("click", () => {
+    currentIndex = index;
+    openLightbox();
   });
+});
+
+function openLightbox(){
+  lightbox.style.display = "flex";
+  showImage();
+}
+
+// نمایش عکس
+function showImage(){
+  lightboxImg.classList.remove("show");
+
+  setTimeout(() => {
+    lightboxImg.src = images[currentIndex].src;
+    lightboxImg.classList.add("show");
+  }, 100);
+}
+
+// بعدی
+function next(){
+  currentIndex = (currentIndex + 1) % images.length;
+  showImage();
+}
+
+// قبلی
+function prev(){
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  showImage();
+}
+
+document.querySelector(".next").onclick = next;
+document.querySelector(".prev").onclick = prev;
+
+// بستن
+document.querySelector(".close").onclick = () => {
+  lightbox.style.display = "none";
+};
+
+// کلیک بیرون = بستن
+lightbox.onclick = (e) => {
+  if(e.target === lightbox){
+    lightbox.style.display = "none";
+  }
+};
+
+// کیبورد
+document.addEventListener("keydown", (e) => {
+  if(lightbox.style.display === "flex"){
+    if(e.key === "ArrowRight") next();
+    if(e.key === "ArrowLeft") prev();
+    if(e.key === "Escape") lightbox.style.display = "none";
+  }
+});
+
+// 📱 swipe
+let startX = 0;
+
+lightbox.addEventListener("touchstart", e => {
+  startX = e.touches[0].clientX;
+});
+
+lightbox.addEventListener("touchend", e => {
+  let endX = e.changedTouches[0].clientX;
+
+  if(startX - endX > 50){
+    next();
+  } else if(endX - startX > 50){
+    prev();
+  }
 });
 </script>
 
