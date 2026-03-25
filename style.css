@@ -368,19 +368,48 @@ form.order-form button{
   cursor:pointer;
 }
 
+.lightbox .prev{
+  left:30px;
+}
+
+.lightbox .next{
+  right:30px;
+}
+
 .lightbox button{
   position:absolute;
   top:50%;
   transform:translateY(-50%);
-  font-size:40px;
-  color:white;
-  background:none;
-  border:none;
+
+  width:55px;
+  height:55px;
+  border-radius:999px;
+
+  border:2px solid var(--accent);
+
+  background:linear-gradient(#fff7dc, var(--accent));
+  color:var(--navy);
+
+  font-size:26px;
+  font-weight:bold;
+
+  box-shadow:
+    0 0 14px rgba(214,166,58,.45),
+    inset 0 3px 6px rgba(255,255,255,.6);
+
   cursor:pointer;
+  transition:all .25s ease;
 }
 
-.lightbox .prev{ left:20px; }
-.lightbox .next{ right:20px; }
+.lightbox button:hover{
+  transform:translateY(-50%) scale(1.1);
+
+  box-shadow:
+    0 0 24px rgba(214,166,58,.7),
+    inset 0 4px 8px rgba(255,255,255,.7);
+
+  color:#fff;
+}
 
 /* -------------------- Social links (boutons) -------------------- */
 .social-links .btn{
