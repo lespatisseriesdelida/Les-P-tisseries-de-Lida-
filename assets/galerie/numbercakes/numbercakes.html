@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Number Cakes — Les Pâtisseries de Lida</title>
+  <meta name="description" content="Number Cakes personnalisés : formes chiffres/lettres, cœur, cercle. Tailles, tarifs, personnalisation et galerie.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --navy:#1a2238;         
+      --cream:#fdf6ed;        
+      --ink:#0e0e0e;          
+      --accent:#caa24d;       
+      --hover:#b68b2e;        
+      --card:#ffffff;         
+      --border:rgba(0,0,0,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{
+      margin:0;padding:0;
+      background:var(--cream);
+      color:var(--ink);
+      font-family:Inter,system-ui,sans-serif;
+      line-height:1.7;
+    }
+    a{text-decoration:none;color:var(--accent);transition:.25s}
+    a:hover{color:var(--hover)}
+    .wrap{max-width:95%; margin:0 auto;padding:20px 10px;}
+
+    /* Header navy */
+    header.hero{
+      background:var(--navy); color:#fff; text-align:center;
+      padding:32px 16px 28px; border-bottom:4px solid var(--accent);
+      border-radius:14px 14px 0 0;
+    }
+    .logo{width:170px; height:auto; display:block; margin:0 auto 12px; border-radius:10px}
+    .brand{font-family:'Great Vibes',cursive; font-size:40px; margin:6px 0 2px}
+    .badge{display:inline-block; padding:6px 14px; border-radius:999px; background:var(--accent); color:var(--navy); font-weight:700; font-size:14px}
+
+    /* کارت اصلی */
+    main.card{
+      background:var(--card); border:1px solid var(--border);
+      border-radius:0 0 16px 16px; padding:28px;
+      box-shadow:0 6px 16px rgba(0,0,0,.06);
+    }
+    h2{font-family:'Playfair Display',serif; color:var(--navy); text-align:center; margin:22px 0 10px}
+    p.lead{font-size:18px; text-align:center; color:#1d1d1d; margin:8px auto 18px; max-width:760px}
+    p, ul{max-width:760px; margin:10px auto; font-size:17px}
+    ul{padding-left:20px}
+
+    /* ✅ تصویر اصلی - اضافه شده */
+    .media{
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid var(--border);
+      background:#fffaf6;
+      max-width:480px;       /* حداکثر عرض تصویر */
+      margin:0 auto;         /* وسط‌چین */
+      box-shadow:0 3px 8px rgba(0,0,0,.05);
+    }
+    .media img{
+      width:100%;
+      height:auto;
+      display:block;
+      object-fit:cover;
+    }
+
+    /* گالری واکنش‌گرا */
+    .gallery{
+      display:grid;
+      gap:16px;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      margin-top:16px
+    }
+    .gallery img{
+      width:100%;
+      aspect-ratio:1/1;
+      object-fit:cover;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:#fffaf6;
+      box-shadow:0 1px 2px rgba(0,0,0,.03);
+    }
+
+    /* دکمه‌ها */
+    .cta{display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin:24px 0 8px}
+    .btn{
+      display:inline-block; white-space:nowrap; padding:10px 22px; border-radius:999px;
+      background:linear-gradient(#fff7dc,var(--accent));
+      border:2px solid var(--accent); color:var(--navy);
+      font-family:'Great Vibes',cursive; font-size:22px; letter-spacing:.2px;
+      box-shadow:0 0 14px rgba(214,166,58,.45); transition:all .25s ease;
+    }
+    .btn:hover{transform:translateY(-2px); box-shadow:0 0 24px rgba(214,166,58,.7)}
+
+    footer{
+      text-align:center;
+      color:var(--navy);
+      font-size:14px;
+      margin-top:26px;
+      padding-top:18px;
+      border-top:1px solid var(--border);
+    }
+
+    /* ریسپانسیو */
+    @media (max-width:600px){
+      .brand{font-size:32px}
+      .btn{font-size:20px; padding:9px 18px}
+    }
+
+    /* بخش دو ستونه */
+    .split{display:grid; gap:22px; margin-top:8px}
+    @media(min-width:900px){
+      .split{grid-template-columns:1.1fr .9fr; align-items:center}
+    }
+
+    .note{
+      font-size:14px; color:#555; background:#fff;
+      border:1px dashed #ead9c8; border-radius:14px; padding:12px 14px;
+      max-width:760px; margin:10px auto;
+    }
+
+    .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  }
+
+  .lightbox:target {
+    display: flex;
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  </style>
+</head>
+
+<!-- Cookie consent bar -->
+<div id="cookie-banner" class="cookie-banner" style="display:none;">
+  <p>
+    Nous utilisons des cookies uniquement pour mesurer l’audience du site.
+    <a href="#">En savoir plus</a>
+  </p>
+  <div class="cookie-actions">
+    <button id="cookie-accept">J’accepte</button>
+    <button id="cookie-decline">Plus tard</button>
+  </div>
+</div>
+
+<script>
+  // چک کنیم قبلاً قبول کرده یا نه
+  const banner = document.getElementById('cookie-banner');
+  const accepted = localStorage.getItem('lida_cookie_consent');
+
+  // تابع لود کردن گوگل آنالیتیکس فقط وقتی که کاربر قبول کرد
+  function loadAnalytics() {
+    // این اسکریپت رو با آیدی خودت عوض کن
+    const ga = document.createElement('script');
+    ga.async = true;
+    ga.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"; // ← اینو عوض کن
+    document.head.appendChild(ga);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX'); // ← اینو هم عوض کن
+  }
+
+  if (!accepted) {
+    banner.style.display = 'flex';
+  } else if (accepted === 'yes') {
+    loadAnalytics();
+  }
+
+  document.getElementById('cookie-accept').addEventListener('click', () => {
+    localStorage.setItem('lida_cookie_consent', 'yes');
+    banner.style.display = 'none';
+    loadAnalytics();
+  });
+
+  document.getElementById('cookie-decline').addEventListener('click', () => {
+    localStorage.setItem('lida_cookie_consent', 'no');
+    banner.style.display = 'none';
+  });
+</script>
+  
+<body>
+  <div class="wrap">
+    <!-- Header -->
+    <header class="hero">
+      <img class="logo" src="../../../assets/mainlogo.png" alt="Logo Les Pâtisseries de Lida">
+      <div class="brand">Les Pâtisseries de Lida</div>
+
+      <nav class="nav-buttons" aria-label="Navigation principale">
+        <a class="btn" href="../../../index.html">Accueil</a>
+        <a class="btn" href="../../../index.html#galerie">Galerie</a>
+        <a class="btn" href="../../contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Content -->
+    <main class="card" role="main">
+      <p class="lead">
+        <h2>Number Cakes</h2>
+        Hyper tendance, nos Number Cakes se déclinent sous différentes formes&nbsp;:
+        <strong>chiffres, lettres, cercle, cœur</strong>, ou toute autre forme selon vos envies.
+      </p>
+
+      <!-- دو ستونه -->
+      <section class="split"> 
+        <div>
+          <h2>Tarifs</h2>
+          <p>À partir de <strong>5&nbsp;€ la part</strong> (hors personnalisation). Les décorations spécifiques et les impressions alimentaires sont proposées en supplément.</p>
+
+          <h2>Personnalisation</h2>
+          <p>Pour toute demande de devis, merci d’indiquer&nbsp;:</p>
+          <ul>
+            <li>le <strong>thème</strong> ;</li>
+            <li>le <strong>modèle</strong> (forme souhaitée) ;</li>
+            <li>le <strong>goût</strong> et la <strong>base</strong> (génoise nature, chocolat ou sablée) ;</li>
+            <li>la <strong>crème</strong> (chantilly mascarpone, ganache, crème diplomate…) ;</li>
+            <li>les <strong>suppléments</strong> gourmands : speculoos, caramel beurre salé, fruits rouges, etc.</li>
+          </ul>
+
+          <h2>Portions disponibles</h2>
+          <p>Commandes possibles pour <strong>8</strong>, <strong>12</strong>, <strong>15 parts</strong>, et selon certaines formes, <strong>au-delà</strong>.</p>
+        </div>
+
+        <div>
+          <div class="media">
+            <img src="../../../assets/galerie/numbercakes/nc.png" alt="Number cake" loading="lazy">
+          </div>
+
+        <!--  <div class="cta" style="margin-top:12px">
+            <span class="badge" style="background:#fff;color:var(--navy);border:1px solid var(--border)">Chantilly Mascarpone</span>
+            <span class="badge" style="background:#fff;color:var(--navy);border:1px solid var(--border)">Buttercream</span>
+            <span class="badge" style="background:#fff;color:var(--navy);border:1px solid var(--border)">Fruits Rouges</span>
+          </div> -->
+        </div>
+      </section>
+
+      <h2>Quelques réalisations</h2>
+      <div class="gallery">
+
+        <img src="../../../assets/galerie/numbercakes/nc1.jpg" alt="Number cake chiffre 1">
+        <img src="../../../assets/galerie/numbercakes/nc2.jpg" alt="Number cake chiffre 2">
+        <img src="../../../assets/galerie/numbercakes/nc3.jpg" alt="Number cake cœur">
+        <img src="../../../assets/galerie/numbercakes/nc4.jpg" alt="Number cake lettre">
+        <img src="../../../assets/galerie/numbercakes/nc5.jpg" alt="Number cake cercle">>
+      </div>
+
+      <div class="cta">
+        <a class="btn" href="mailto:contact@lespatisseriesdelida.fr">Demander un devis</a>
+        <a class="btn" href="../../../index.html#galerie">Voir la galerie</a>
+      </div>
+
+      <footer>
+        © Les Pâtisseries de Lida — Nord (59) &amp; Pas-de-Calais (62)
+      </footer>
+    </main>
+  </div>
+
+<!-- ساخت گالری با لینک‌ها -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+const images = document.querySelectorAll(".gallery img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+let currentIndex = 0;
+
+// باز کردن
+images.forEach((img, index) => {
+  img.addEventListener("click", () => {
+    currentIndex = index;
+    openLightbox();
+  });
+});
+
+function openLightbox(){
+  lightbox.style.display = "flex";
+  showImage();
+}
+
+// نمایش عکس
+function showImage(){
+  lightboxImg.classList.remove("show");
+
+  setTimeout(() => {
+    lightboxImg.src = images[currentIndex].src;
+    lightboxImg.classList.add("show");
+  }, 100);
+}
+
+// بعدی
+function next(){
+  currentIndex = (currentIndex + 1) % images.length;
+  showImage();
+}
+
+// قبلی
+function prev(){
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  showImage();
+}
+
+document.querySelector(".next").onclick = next;
+document.querySelector(".prev").onclick = prev;
+
+// بستن
+document.querySelector(".close").onclick = () => {
+  lightbox.style.display = "none";
+};
+
+// کلیک بیرون = بستن
+lightbox.onclick = (e) => {
+  if(e.target === lightbox){
+    lightbox.style.display = "none";
+  }
+};
+
+// کیبورد
+document.addEventListener("keydown", (e) => {
+  if(lightbox.style.display === "flex"){
+    if(e.key === "ArrowRight") next();
+    if(e.key === "ArrowLeft") prev();
+    if(e.key === "Escape") lightbox.style.display = "none";
+  }
+});
+
+// 📱 swipe
+let startX = 0;
+
+lightbox.addEventListener("touchstart", e => {
+  startX = e.touches[0].clientX;
+});
+
+lightbox.addEventListener("touchend", e => {
+  let endX = e.changedTouches[0].clientX;
+
+  if(startX - endX > 50){
+    next();
+  } else if(endX - startX > 50){
+    prev();
+  }
+});
+
+});
+</script>
+
+<button id="scrollTopBtn" class="scroll-top" title="Haut de page" aria-label="Revenir en haut">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="currentColor" d="M12 4c.28 0 .53.11.71.29l6 6a1 1 0 1 1-1.42 1.42L13 7.41V19a1 1 0 1 1-2 0V7.41l-4.29 4.3A1 1 0 0 1 5.3 10.3l6-6A1 1 0 0 1 12 4z"/>
+    </svg>
+  </button>
+  
+</body>
+</html>
