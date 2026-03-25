@@ -297,9 +297,9 @@ images.forEach((img, index) => {
 
 function openLightbox(){
   lightbox.style.display = "flex";
+  document.body.style.overflow = "hidden"; // 🔥 جلوگیری از اسکرول
   showImage();
 }
-
 // نمایش عکس
 function showImage(){
   lightboxImg.classList.remove("show");
@@ -328,12 +328,15 @@ document.querySelector(".prev").onclick = prev;
 // بستن
 document.querySelector(".close").onclick = () => {
   lightbox.style.display = "none";
+  document.body.style.overflow = "auto"; // 🔥 برگردوندن اسکرول
 };
 
 // کلیک بیرون = بستن
-lightbox.onclick = (e) => {
+
+  lightbox.onclick = (e) => {
   if(e.target === lightbox){
     lightbox.style.display = "none";
+    document.body.style.overflow = "auto"; // 🔥 مهم
   }
 };
 
